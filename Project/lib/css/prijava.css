@@ -17,6 +17,11 @@ body{
     min-height: 1px;
 }
 
+.row.one{
+    width: 100%;
+    float: left;
+}
+
 .column{
     border-style: none;
     display: inline-block; /*Omogućava da se kolone prikažu bez da se float mora clearovati poslije*/
@@ -32,8 +37,17 @@ body{
     margin-right: 0;
 }
 
-.column.four{
+.column.four.right{
     width: 50%;
+    text-align: right;
+    margin: 0;
+}
+.column.four.left{
+    width: 49%;
+    text-align: left;
+    vertical-align: middle;
+    padding-left: 1%;
+    margin:0;
 }
 .column.three{
     width: 100%;
@@ -59,37 +73,6 @@ body{
     color: darkred;
 }
 
-#coverPhoto{
-    margin-left: auto;
-    margin-right:auto;
-    justify-content: center;
-}
-
-#drvenija{
-   /* float: left;
-    margin: 10px;*/
-    width: 100%;
-    height: 100%;
-}
-
-#naslovZaSliku{
-    color: white;
-    position: absolute;
-    top: 350px;
-    left: 0;
-    width: 100%;
-    text-align: center;
-}
-
-#naslovZaBookShelf{
-    color: darkred;
-    text-align: center;
-}
-
-#aboutUsCaption{
-    color: darkred;
-}
-
 #homeLink{
     text-decoration: none;
     color: white;
@@ -110,19 +93,40 @@ body{
     color: black;
 }
 
-#uslugeCaption{
-    text-align: center;
+#prijavNaslov{
     background-color: darkred;
-}
-
-#naslovZaBookShelf{
     color: white;
-}
-
-#bookShelfImg{
     text-align: center;
 }
 
+#registracija{
+    color: darkred;
+}
+
+#registracijaLink{
+    color: darkred;
+}
+
+#arrow{
+    vertical-align: middle;
+    height: 30px;
+    width: 30px;
+}
+
+#potvrdaRow{
+    text-align: center;
+}
+
+#potvrdaButton{
+    background-color: darkred;
+    color: white;
+    padding: 16px;
+    font-size: 13.55pt;
+    border: none;
+    cursor: pointer;
+}
+
+/* Button */
 .dropbtn {
     background-color: darkred;
     color: white;
@@ -166,8 +170,4 @@ body{
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
     background-color: darkred;
-}
-
-#shareButton{
-    text-align: center;
 }

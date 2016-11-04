@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prijava ba</title>
+    <link rel="stylesheet" href="lib/css/prijava.css">
+</head>
+
+<BODY>
+
+<!--Meni-->
+<div class="row">
+    <div id="moto" class="column one">
+        <div class="dropdown">
+            <button class="dropbtn"> <a id="homeLink" href="mainPage.html">Drvenija.ba</a></button>
+            <div class="dropdown-content">
+                <a href="kupi.html">Kupi</a>
+                <a href="prodaj.html">Prodaj/zamjeni</a>
+            </div>
+        </div>
+        Skromni sponzor roditelja i učenika.
+    </div>
+    <div class="column two"><h2> <a id="aboutUsLink" href="mainPage.html#aboutUsCaption">O nama</a> </h2></div> <!--O nama-->
+    <div class="column two"><h2> <a id="infoLink" href="mainPage.html#uslugeCaption">Usluge</a> </h2></div> <!--Usluge-->
+    <div class="column two"><h2> <a id="prijavaLink" href="#">Prijava</a> </h2></div> <!--Prijava-->
+</div>
+
+<!--Korisnik nije prijavljen-->
+<div class="row">
+    <div id="registracija" class="column three"><h3>Nemate korisnički račun?
+        <a id="registracijaLink" href="registracija.html">Registrujte se!</a>
+        <img id="arrow" src="Pictures/arrowImg.png">
+    </h3>
+    </div>
+</div>
+
+<!--Prijava naslov-->
+<div class="row">
+    <div id="prijavNaslov" class="column three"><h3>Prijava</h3></div>
+</div>
+
+<!--Unos podataka-->
+<form>
+<div class="row one">
+    <div class="column four right"><h3>Korisničko ime:</h3></div>
+    <div class="column four left"><h3><input type="text" name="userName"></h3></div>
+</div>
+<div class="row one">
+    <div class="column four right"><h3>Lozinka:</h3></div>
+    <div class="column four left"><h3><input type="text" name="password"></h3></div>
+</div>
+<div class="row one">
+    <div id="potvrdaRow" class="column three"><h3> <input id="potvrdaButton" type="submit" value="Prijavi se"> </h3></div>
+</div>
+</form>
+
+</BODY>
+
+</html>
