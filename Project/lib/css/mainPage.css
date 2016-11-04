@@ -39,7 +39,7 @@ body{
     width: 100%;
 }
 .column.two{
-    text-align: right;
+
     width: 10%;
 }
 .column.one{
@@ -50,13 +50,20 @@ body{
     text-align: center;
 }
 
+#meni{
+    position: fixed;
+    background-color: white;
+    z-index:1;
+}
+
+#arrowUP{
+    width: 30px;
+    height: 30px;
+}
+
 #moto{
     color: darkred;
     font-size: 20px;
-}
-
-#logo{
-    color: darkred;
 }
 
 #coverPhoto{
@@ -102,7 +109,7 @@ body{
 
 #infoLink{
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 #prijavaLink{
@@ -170,4 +177,30 @@ body{
 
 #shareButton{
     text-align: center;
+}
+
+#test{
+    text-align: center;
+}
+
+#prodajLine{
+    text-align: center;
+}
+
+#kupiLine{
+    text-align: center;
+}
+
+#prodajButton{
+    text-decoration: none;
+    color: white;
+}
+
+#kupiButton{
+    text-decoration: none;
+    color: white;
+}
+
+#copyright{
+    color: darkred;
 }

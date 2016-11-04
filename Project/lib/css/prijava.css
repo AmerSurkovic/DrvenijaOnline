@@ -53,7 +53,6 @@ body{
     width: 100%;
 }
 .column.two{
-    text-align: right;
     width: 10%;
 }
 .column.one{
@@ -85,7 +84,7 @@ body{
 
 #infoLink{
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 #prijavaLink{
@@ -170,4 +169,8 @@ body{
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
     background-color: darkred;
+}
+
+#copyright{
+    color: darkred;
 }

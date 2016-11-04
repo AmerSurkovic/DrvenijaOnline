@@ -17,11 +17,6 @@ body{
     min-height: 1px;
 }
 
-.row.one{
-    width: 100%;
-    float: left;
-}
-
 .column{
     border-style: none;
     display: inline-block; /*Omogućava da se kolone prikažu bez da se float mora clearovati poslije*/
@@ -37,20 +32,19 @@ body{
     margin-right: 0;
 }
 
-.column.four.right{
-    width: 50%;
-    text-align: right;
-    margin: 0;
+.column.five{
+    width: 10%;
 }
-.column.four.left{
-    width: 49%;
-    text-align: left;
-    vertical-align: middle;
-    padding-left: 1%;
-    margin:0;
+
+.column.four{
+    width: 56%;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 .column.three{
-    width: 100%;
+    width: 25%;
+    padding-right: 5%;
+    padding-left: 5%;
 }
 .column.two{
     width: 10%;
@@ -59,17 +53,13 @@ body{
     width: 70%;
 }
 
-#aboutUs{
-    text-align: center;
+#meni{
+    background-color: white;
 }
 
 #moto{
     color: darkred;
     font-size: 20px;
-}
-
-#logo{
-    color: darkred;
 }
 
 #homeLink{
@@ -92,37 +82,9 @@ body{
     color: black;
 }
 
-#prijavaLink1{
-    color: darkred;
-}
-
-#registracijaNaslov{
+#kategorije{
     background-color: darkred;
     color: white;
-    text-align: center;
-}
-
-#prijava{
-    color: darkred;
-}
-
-#arrow{
-    vertical-align: middle;
-    height: 30px;
-    width: 30px;
-}
-
-#potvrdaRow{
-    text-align: center;
-}
-
-#potvrdaButton{
-    background-color: darkred;
-    color: white;
-    padding: 16px;
-    font-size: 13.55pt;
-    border: none;
-    cursor: pointer;
 }
 
 /* Button */
@@ -169,8 +131,4 @@ body{
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
     background-color: darkred;
-}
-
-#copyright{
-    color: darkred;
 }
