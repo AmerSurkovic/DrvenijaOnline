@@ -13,14 +13,23 @@
 <div id="meni" class="row">
     <div id="moto" class="column one">
         <div class="dropdown">
-            <button class="dropbtn"> <a id="homeLink" href="mainPage.html">Drvenija.ba</a></button>
+            <button class="dropbtn">Drvenija.ba</button> <!-- Napraviti skriptu za poziv stranice href="mainPage.html"-->
         </div>
-        Skromni sponzor roditelja i učenika. <br>
+
+        <div id="alternativeMenu" class="dropdown">
+            <button class="dropbtn">Meni</button>
+            <div class="dropdown-content">
+                <a href="#aboutUsCaption">O nama</a>
+                <a href="#uslugeCaption">Usluge</a>
+                <a href="prijava.html">Prijava</a>
+            </div>
+        </div> <br>
+        Skromni sponzor roditelja i učenika.
     </div>
     <div class="column two"><h2> <a id="aboutUsLink" href="#aboutUsCaption">O nama</a> </h2></div> <!--O nama-->
     <div class="column two"> <!--Usluge-->
         <div class="dropdown">
-            <button class="dropbtn"> <a id="infoLink" href="#uslugeCaption">Usluge</a></button>
+            <button id="realMenu" class="dropbtn">Usluge</button> <!-- Napraviti skriptu za poziv stranice href="mainPage.html#usluge"-->
             <div class="dropdown-content">
                 <a href="kupi.html">Kupi</a>
                 <a href="prodaj.html">Prodaj/zamjeni</a>
@@ -28,6 +37,7 @@
         </div>
     </div>
     <div class="column two"><h2> <a id="prijavaLink" href="prijava.html">Prijava</a></h2></div> <!--Prijava-->
+
 </div>
 
 <!--Welcome info-->
@@ -43,6 +53,7 @@
 <div class="row" id="aboutUs">
     <div class="column three">
         <h2 id="aboutUsCaption">O nama</h2>
+        <h3 id="naslovZaSlikuINHERIT">Drvenija.ba je stranica za prodaju i razmjenu udžbenika iz osnovnih i srednjih škola.</h3>
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin cursus magna et ante commodo, id interdum lacus blandit. Aliquam accumsan faucibus nisl nec hendrerit. Cras sodales nec justo sit amet consectetur. Aenean egestas faucibus augue nec dapibus. Suspendisse lacinia purus imperdiet convallis tempor. Pellentesque nibh justo, rutrum eu velit in, tincidunt blandit est. Aliquam justo lectus, scelerisque et arcu in, fringilla ullamcorper ex.
 
@@ -101,7 +112,7 @@
             Vivamus venenatis bibendum dolor non interdum. Phasellus felis augue, iaculis vitae rhoncus nec, efficitur vitae massa. Sed sit amet est felis. Morbi cursus non orci a pellentesque. Donec fermentum diam tellus, fringilla vehicula tortor aliquam vel. Vivamus vitae dui mi. Nullam quis dignissim risus. Nulla sem augue, commodo in ex in, lacinia tincidunt massa. Etiam sit amet commodo elit. Sed eleifend laoreet euismod. Quisque fringilla scelerisque tristique. Cras lobortis dignissim lectus eu consectetur. Ut bibendum molestie tellus aliquet accumsan. Cras convallis nisl eget scelerisque dapibus.
         </p>
         <p id="kupiLine">
-            <button class="dropbtn"> <a id="kupiButton" href="kupi.html">Kupi</a></button>
+            <button class="dropbtn"><a id="kupiButton" href="kupi.html">Kupi</a></button>
         </p>
     </div>
 </div>

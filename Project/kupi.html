@@ -12,14 +12,23 @@
 <div id="meni" class="row">
     <div id="moto" class="column one">
         <div class="dropdown">
-            <button class="dropbtn"> <a id="homeLink" href="mainPage.html">Drvenija.ba</a></button>
+            <button class="dropbtn">Drvenija.ba</button> <!-- Napraviti skriptu za poziv stranice href="mainPage.html"-->
         </div>
-        Skromni sponzor roditelja i učenika. <br>
+
+        <div id="alternativeMenu" class="dropdown">
+            <button class="dropbtn">Meni</button>
+            <div class="dropdown-content">
+                <a href="mainPage.html#aboutUsCaption">O nama</a>
+                <a href="mainPage.html#uslugeCaption">Usluge</a>
+                <a href="prijava.html">Prijava</a>
+            </div>
+        </div> <br>
+        Skromni sponzor roditelja i učenika.
     </div>
-    <div class="column two"><h2> <a id="aboutUsLink" href="#aboutUsCaption">O nama</a> </h2></div> <!--O nama-->
+    <div class="column two"><h2> <a id="aboutUsLink" href="mainPage.html#aboutUsCaption">O nama</a> </h2></div> <!--O nama-->
     <div class="column two"> <!--Usluge-->
         <div class="dropdown">
-            <button class="dropbtn"> <a id="infoLink" href="mainPage.html#uslugeCaption">Usluge</a></button>
+            <button id="realMenu" class="dropbtn">Usluge</button> <!-- Napraviti skriptu za poziv stranice href="mainPage.html#usluge"-->
             <div class="dropdown-content">
                 <a href="kupi.html">Kupi</a>
                 <a href="prodaj.html">Prodaj/zamjeni</a>
@@ -27,11 +36,67 @@
         </div>
     </div>
     <div class="column two"><h2> <a id="prijavaLink" href="prijava.html">Prijava</a></h2></div> <!--Prijava-->
+
 </div>
 
 <!--Listing-->
 <div class="row">
-    <div id="kategorije" class="column three"><h3>Kategorije:</h3>
+    <div class="column four">
+        <div id="ponude" class="row"><h3>Aktuelne ponude</h3></div>
+        <div id="pretraga" class="row two">Pretraga: <input type="search"> <img id="arrow" src="Pictures/arrowImg.png"></div>
+        <div class="row one">
+            <div class="column five">
+                <img src="Pictures/matematika2.jpg">
+            </div>
+            <div class="column six">
+                <p>
+                    Mogućnost razmjene: <b>DA</b> <br>
+                    <br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in faucibus enim. Vestibulum vel fringilla quam, id vehicula purus. Sed sagittis pulvinar risus eget ullamcorper. Morbi a elit id sem consectetur pretium sed at ligula. Cras vehicula arcu sodales augue bibendum eleifend. Aliquam condimentum nisl ligula, sit amet pretium arcu mollis tempor. Nunc feugiat dui eu ipsum congue consequat. Aenean a luctus lectus. Etiam varius maximus nisl, eu vestibulum ante. Nam dictum tempor purus, ac sagittis risus. Fusce vel leo lobortis, lacinia urna quis, facilisis nulla. Vestibulum pellentesque at nisi ac pulvinar. Nunc lacinia pellentesque urna a sagittis. Nullam ac lacinia enim. Ut libero neque, suscipit ac velit vitae, lobortis pulvinar tellus. Morbi sollicitudin mattis tincidunt.
+
+                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse potenti. Morbi sed elit quis justo mattis iaculis sit amet in arcu. Quisque vel consectetur justo. Aenean sit amet consequat lacus. Phasellus sagittis sit amet sem quis mollis. Fusce a risus metus. Phasellus pellentesque dolor ut facilisis dignissim. Aenean auctor lacinia iaculis. Fusce molestie, est in accumsan efficitur, nisi justo mattis turpis, at gravida mi urna ut sem. Nullam sollicitudin venenatis iaculis. Pellentesque sit amet dolor urna. Mauris finibus purus vitae sapien tincidunt, ut facilisis ligula semper. Phasellus a consequat tellus. Sed gravida tempor mi, non accumsan neque finibus et. Aenean luctus fermentum enim, vitae varius arcu vehicula nec.
+                </p>
+                <button class="dropbtn one">Kupi</button>
+                <button class="dropbtn one">Zamjeni</button>
+                <button class="dropbtn one">Tračaj</button>
+            </div>
+        </div>
+        <div class="row one">
+            <div class="column five">
+                <img src="Pictures/biologija.jpg">
+            </div>
+            <div class="column six">
+                <p>
+                    Mogućnost razmjene: <b>NE</b> <br>
+                    <br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in faucibus enim. Vestibulum vel fringilla quam, id vehicula purus. Sed sagittis pulvinar risus eget ullamcorper. Morbi a elit id sem consectetur pretium sed at ligula. Cras vehicula arcu sodales augue bibendum eleifend. Aliquam condimentum nisl ligula, sit amet pretium arcu mollis tempor. Nunc feugiat dui eu ipsum congue consequat. Aenean a luctus lectus. Etiam varius maximus nisl, eu vestibulum ante. Nam dictum tempor purus, ac sagittis risus. Fusce vel leo lobortis, lacinia urna quis, facilisis nulla. Vestibulum pellentesque at nisi ac pulvinar. Nunc lacinia pellentesque urna a sagittis. Nullam ac lacinia enim. Ut libero neque, suscipit ac velit vitae, lobortis pulvinar tellus. Morbi sollicitudin mattis tincidunt.
+
+                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse potenti. Morbi sed elit quis justo mattis iaculis sit amet in arcu. Quisque vel consectetur justo. Aenean sit amet consequat lacus. Phasellus sagittis sit amet sem quis mollis. Fusce a risus metus. Phasellus pellentesque dolor ut facilisis dignissim. Aenean auctor lacinia iaculis. Fusce molestie, est in accumsan efficitur, nisi justo mattis turpis, at gravida mi urna ut sem. Nullam sollicitudin venenatis iaculis. Pellentesque sit amet dolor urna. Mauris finibus purus vitae sapien tincidunt, ut facilisis ligula semper. Phasellus a consequat tellus. Sed gravida tempor mi, non accumsan neque finibus et. Aenean luctus fermentum enim, vitae varius arcu vehicula nec.
+                </p>
+                <button class="dropbtn one">Kupi</button>
+                <button class="dropbtn one">Tračaj</button>
+            </div>
+        </div>
+        <div class="row one">
+            <div class="column five">
+                <img src="Pictures/historija.jpg">
+            </div>
+            <div class="column six">
+                <p>
+                    Mogućnost razmjene: <b>DA</b> <br>
+                    <br>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent in faucibus enim. Vestibulum vel fringilla quam, id vehicula purus. Sed sagittis pulvinar risus eget ullamcorper. Morbi a elit id sem consectetur pretium sed at ligula. Cras vehicula arcu sodales augue bibendum eleifend. Aliquam condimentum nisl ligula, sit amet pretium arcu mollis tempor. Nunc feugiat dui eu ipsum congue consequat. Aenean a luctus lectus. Etiam varius maximus nisl, eu vestibulum ante. Nam dictum tempor purus, ac sagittis risus. Fusce vel leo lobortis, lacinia urna quis, facilisis nulla. Vestibulum pellentesque at nisi ac pulvinar. Nunc lacinia pellentesque urna a sagittis. Nullam ac lacinia enim. Ut libero neque, suscipit ac velit vitae, lobortis pulvinar tellus. Morbi sollicitudin mattis tincidunt.
+
+                    Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Suspendisse potenti. Morbi sed elit quis justo mattis iaculis sit amet in arcu. Quisque vel consectetur justo. Aenean sit amet consequat lacus. Phasellus sagittis sit amet sem quis mollis. Fusce a risus metus. Phasellus pellentesque dolor ut facilisis dignissim. Aenean auctor lacinia iaculis. Fusce molestie, est in accumsan efficitur, nisi justo mattis turpis, at gravida mi urna ut sem. Nullam sollicitudin venenatis iaculis. Pellentesque sit amet dolor urna. Mauris finibus purus vitae sapien tincidunt, ut facilisis ligula semper. Phasellus a consequat tellus. Sed gravida tempor mi, non accumsan neque finibus et. Aenean luctus fermentum enim, vitae varius arcu vehicula nec.
+                </p>
+                <button class="dropbtn one">Kupi</button>
+                <button class="dropbtn one">Zamjeni</button>
+                <button class="dropbtn one">Tračaj</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="kategorije" class="column three"><h3>Drvenija.ba<br><br>Kategorije:</h3>
         <ul>
             <li>Osnovna škola
                 <ul>
@@ -59,30 +124,11 @@
             </li>
         </ul>
     </div>
-    <div class="column four"><h3>Aktuelne ponude</h3>
+</div>
 
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque pulvinar maximus volutpat. Nunc ut eros sapien. In porta fringilla pretium. Quisque condimentum fermentum pharetra. Fusce venenatis molestie arcu sed vestibulum. Duis a facilisis ligula. Quisque auctor at nulla a condimentum. Nulla facilisi. Aliquam fermentum tempor erat, vitae blandit justo varius ut. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Cras aliquam leo id sapien fringilla, id rutrum ex auctor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sodales hendrerit ipsum quis gravida. Vestibulum ornare nisl non risus posuere, sed fermentum nibh accumsan. Duis blandit fermentum risus nec blandit. Phasellus nisi ipsum, sodales in quam id, pharetra laoreet turpis.
-
-        Suspendisse vehicula turpis in euismod mollis. Proin et mauris ac neque tempus consectetur sit amet eu turpis. Quisque quis nisl nec eros elementum egestas eget eget enim. Curabitur dictum, neque in molestie vestibulum, ipsum est sodales sem, vel condimentum purus lacus convallis felis. Quisque nibh eros, egestas sagittis pretium sit amet, dapibus porttitor nulla. Cras ut justo vel ex ultricies commodo. Fusce sit amet bibendum nisl, eget cursus magna. Nulla maximus, mauris et sollicitudin posuere, massa lacus viverra lectus, vitae finibus mauris justo id elit. Phasellus pulvinar ullamcorper tincidunt. Mauris congue at nibh eu condimentum. Integer ut libero rhoncus, laoreet nisl in, pulvinar urna. Proin consequat varius vestibulum. Maecenas at pellentesque mi. Sed venenatis dolor nibh, vitae sagittis diam malesuada ac. Aliquam malesuada, magna sit amet efficitur fermentum, eros ex vestibulum neque, vitae bibendum ipsum erat sed tortor. Donec ullamcorper lectus nec ultrices tempus.
-
-        Sed porttitor velit a metus commodo tincidunt. Aenean luctus, lectus nec malesuada blandit, ligula elit consectetur leo, vitae aliquet magna tortor a tortor. Donec eleifend magna nulla, nec tristique ligula pulvinar volutpat. In semper, metus at ornare rhoncus, purus neque dapibus dolor, ac dictum augue urna sit amet sapien. Integer magna turpis, finibus vel pulvinar et, interdum vitae elit. Curabitur ut est et neque sodales posuere vel eu urna. Nunc venenatis elit eget diam ultricies posuere. Cras euismod odio ipsum, sit amet ornare arcu pellentesque quis. Sed velit ligula, egestas vel ipsum sed, eleifend pulvinar mi. Fusce auctor sagittis libero at venenatis. Nulla hendrerit rhoncus dolor, quis mollis turpis sollicitudin et. Curabitur nunc eros, dignissim id lectus vitae, blandit condimentum turpis. Pellentesque rutrum fringilla odio dapibus maximus. Quisque nibh orci, luctus quis est quis, pellentesque elementum neque.
-
-        Phasellus ligula ipsum, accumsan eget sem et, iaculis tincidunt nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas molestie magna eget felis elementum consectetur. Sed malesuada tellus finibus, imperdiet dui sit amet, volutpat eros. Suspendisse potenti. Nullam at tincidunt urna, ut dignissim urna. Nunc lobortis, turpis vel venenatis varius, ex libero dictum turpis, nec tempor ipsum nunc et augue. Maecenas ut est ipsum. In hac habitasse platea dictumst. Ut tincidunt enim nec tortor tincidunt molestie. Nam eget euismod orci. Vestibulum facilisis massa vel tristique lobortis. Praesent maximus orci a tincidunt venenatis. Phasellus gravida pharetra tempus.
-
-        Cras egestas at erat aliquet semper. Phasellus quis eros et enim pulvinar convallis. Nulla facilisi. Nam ullamcorper, erat nec varius sagittis, augue mauris aliquet mauris, accumsan auctor elit felis a risus. Nulla eu pellentesque leo. Donec sodales sapien vehicula, efficitur tellus eget, accumsan ex. Nunc eget nisl quis eros pharetra consequat. Aenean pretium sed ante in scelerisque. Suspendisse libero augue, consequat at tempus in, gravida ut est. Maecenas vehicula felis vel est sagittis sodales. Sed condimentum, orci et hendrerit mollis, sapien nulla volutpat arcu, sed commodo dui erat nec mi. Aenean iaculis semper sollicitudin.
-
-        Proin commodo fringilla libero ut varius. Donec molestie nibh non ipsum efficitur accumsan. Nam imperdiet eget leo a convallis. Duis non velit eget eros finibus sagittis. Vivamus vitae metus sed lectus faucibus mollis. Fusce bibendum et mi sed tincidunt. Sed eget ex efficitur, imperdiet velit nec, placerat orci. Sed id maximus ante. Etiam vel luctus turpis, eget tincidunt mi. Sed mollis molestie risus in aliquam. In tristique scelerisque rutrum. Cras at erat elit. Integer eleifend justo quis porttitor posuere. Proin sed hendrerit eros. Curabitur ut sem feugiat, consectetur velit eget, elementum risus. Cras a iaculis diam, sit amet consectetur felis.
-
-        Nunc ut turpis sit amet erat dapibus aliquet vitae id sem. Sed fermentum efficitur metus eget dapibus. In molestie luctus urna blandit facilisis. Quisque finibus pretium nisl sed elementum. Suspendisse quis sapien iaculis, scelerisque quam sed, suscipit arcu. Nam quam arcu, hendrerit quis tincidunt sit amet, suscipit et felis. Nulla interdum nisi eget orci congue venenatis. In luctus interdum lorem, porttitor egestas nibh rhoncus egestas. Donec convallis ante eu porttitor commodo. Maecenas nisi sapien, molestie ac turpis in, ornare scelerisque orci.
-
-        In fermentum laoreet purus eget interdum. Aliquam facilisis interdum finibus. Fusce a est quis urna malesuada blandit ac ac nunc. Curabitur bibendum nibh a eros mollis interdum. Morbi vel aliquet metus, ut vehicula ipsum. Ut finibus consequat libero, vitae interdum nulla rutrum non. Vivamus convallis pulvinar lectus sit amet laoreet. Curabitur vel arcu ligula. In pulvinar varius lectus eget sollicitudin.
-
-        Nunc porttitor id eros eget sodales. Curabitur id leo vel ex ornare ultricies vel eget justo. Pellentesque dolor eros, ullamcorper sed pharetra ut, ultrices at ipsum. Maecenas at purus non augue gravida viverra. Duis lobortis vestibulum augue, quis pellentesque enim gravida in. Nunc congue porta odio, vel efficitur elit faucibus ac. Duis vel luctus purus, tempus pellentesque erat. Maecenas ac faucibus massa. Mauris ex lorem, malesuada nec tortor in, iaculis lacinia quam.
-
-        Fusce at ipsum ultricies, accumsan ex non, ultrices odio. Nullam nec imperdiet eros. Praesent nec ante quis velit commodo dignissim sed eu dolor. Suspendisse et aliquam risus. Integer eros massa, pharetra a diam vel, commodo placerat lacus. Morbi iaculis commodo leo, quis placerat risus auctor a. Cras diam ligula, auctor a rutrum sit amet, gravida in mi. Suspendisse ipsum urna, euismod nec rutrum vitae, cursus sed enim. Phasellus interdum ante at tincidunt sagittis. Maecenas gravida dolor non sagittis consequat. Donec sapien orci, condimentum egestas varius at, placerat ac sem. Integer ut scelerisque dui. Fusce euismod nec lacus eu sagittis.
-
-    </div>
-    <div class="column five"><h3></h3></div>
+<!--Copyright-->
+<div class="row">
+    <div id="copyright" class="column three">Made with ♥ by Amer Šurković in Sarajevo. ©</div>
 </div>
 
 </BODY>

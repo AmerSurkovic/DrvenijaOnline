@@ -9,24 +9,34 @@
 <BODY>
 
 <!--Meni-->
-<div class="row">
+<div id="meni" class="row">
     <div id="moto" class="column one">
         <div class="dropdown">
-            <button class="dropbtn"> <a id="homeLink" href="mainPage.html">Drvenija.ba</a></button>
+            <button class="dropbtn">Drvenija.ba</button> <!-- Napraviti skriptu za poziv stranice href="mainPage.html"-->
         </div>
-        Skromni sponzor roditelja i učenika. <br>
+
+        <div id="alternativeMenu" class="dropdown">
+            <button class="dropbtn">Meni</button>
+            <div class="dropdown-content">
+                <a href="mainPage.html#aboutUsCaption">O nama</a>
+                <a href="mainPage.html#uslugeCaption">Usluge</a>
+                <a href="prijava.html">Prijava</a>
+            </div>
+        </div> <br>
+        Skromni sponzor roditelja i učenika.
     </div>
-    <div class="column two"><h2> <a id="aboutUsLink" href="#aboutUsCaption">O nama</a> </h2></div> <!--O nama-->
+    <div class="column two"><h2> <a id="aboutUsLink" href="mainPage.html#aboutUsCaption">O nama</a> </h2></div> <!--O nama-->
     <div class="column two"> <!--Usluge-->
         <div class="dropdown">
-            <button class="dropbtn"> <a id="infoLink" href="mainPage.html#uslugeCaption">Usluge</a></button>
+            <button id="realMenu" class="dropbtn">Usluge</button> <!-- Napraviti skriptu za poziv stranice href="mainPage.html#usluge"-->
             <div class="dropdown-content">
                 <a href="kupi.html">Kupi</a>
                 <a href="prodaj.html">Prodaj/zamjeni</a>
             </div>
         </div>
     </div>
-    <div class="column two"><h2> <a id="prijavaLink" href="prijava.html">Prijava</a> </h2></div> <!--Prijava-->
+    <div class="column two"><h2> <a id="prijavaLink" href="prijava.html">Prijava</a></h2></div> <!--Prijava-->
+
 </div>
 
 <!--Korisnik nije prijavljen-->

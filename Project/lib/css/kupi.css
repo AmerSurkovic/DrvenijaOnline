@@ -17,6 +17,21 @@ body{
     min-height: 1px;
 }
 
+.row.one{
+    padding: 10px;
+    width: 100%;
+    float: left;
+    min-height: 1px;
+    
+    border-bottom-style: solid;
+    border-bottom-color: darkred;
+}
+
+.row.two{
+    border-bottom-style: solid;
+    border-bottom-color: darkred;
+}
+
 .column{
     border-style: none;
     display: inline-block; /*Omogućava da se kolone prikažu bez da se float mora clearovati poslije*/
@@ -32,12 +47,22 @@ body{
     margin-right: 0;
 }
 
+.column.six{
+    width: 50%;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
 .column.five{
-    width: 10%;
+    width: 50%;
+}
+
+.column.five>img{
+    width: 100%;
 }
 
 .column.four{
-    width: 56%;
+    width: 75%;
     padding-left: 2%;
     padding-right: 2%;
 }
@@ -85,6 +110,19 @@ body{
 #kategorije{
     background-color: darkred;
     color: white;
+    position: fixed;
+}
+
+#pretraga{
+    color: darkred;
+    text-align: center;
+    font-size: 13.55pt;
+}
+
+#arrow{
+    vertical-align: middle;
+    height: 30px;
+    width: 30px;
 }
 
 /* Button */
@@ -93,6 +131,15 @@ body{
     color: white;
     padding: 16px;
     font-size: 22px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn.one{
+    background-color: darkred;
+    color: white;
+    padding: 16px;
+    font-size: 18px;
     border: none;
     cursor: pointer;
 }
@@ -131,4 +178,41 @@ body{
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
     background-color: darkred;
+}
+
+#alternativeMenu{
+    visibility: hidden;
+}
+
+#ponude{
+    background-color: darkred;
+    color: white;
+    text-align: center;
+}
+
+#copyright{
+    color: darkred;
+}
+
+@media screen and (max-width: 1000px){
+    #aboutUsLink{
+        visibility: hidden;
+    }
+    #prijavaLink{
+        visibility: hidden;
+    }
+    #alternativeMenu{
+        visibility: visible;
+        padding-top: 2%;
+    }
+    #realMenu{
+        visibility: hidden;
+    }
+    #kategorije{
+        visibility: hidden;
+    }
+    .dropbtn.one{
+        background-color: white;
+        color: darkred;
+    }
 }

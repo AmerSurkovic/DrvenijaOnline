@@ -39,7 +39,7 @@ body{
     width: 100%;
 }
 .column.two{
-
+    float: left;
     width: 10%;
 }
 .column.one{
@@ -203,4 +203,35 @@ body{
 
 #copyright{
     color: darkred;
+}
+
+#alternativeMenu{
+    visibility: hidden;
+}
+
+#naslovZaSlikuINHERIT{
+    color:darkred;
+    visibility: hidden;
+}
+
+@media screen and (max-width: 1000px){
+    #aboutUsLink{
+        visibility: hidden;
+    }
+    #prijavaLink{
+        visibility: hidden;
+    }
+    #alternativeMenu{
+        visibility: visible;
+        padding-top: 2%;
+    }
+    #realMenu{
+        visibility: hidden;
+    }
+    #naslovZaSliku{
+        visibility: hidden;
+    }
+    #naslovZaSlikuINHERIT{
+        visibility: visible;
+    }
 }
