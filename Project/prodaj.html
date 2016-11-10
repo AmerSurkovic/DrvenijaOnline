@@ -3,9 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <title>Prodaj ba</title>
+    <link rel="stylesheet" href="lib/css/prodaj.css">
     <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 </head>
-<body>
 
-</body>
+<BODY>
+
+<!--Meni-->
+<div id="meni" class="row">
+    <div id="moto" class="column one">
+        <div class="dropdown">
+            <button class="dropbtn">Drvenija.ba</button> <!-- Napraviti skriptu za poziv stranice href="mainPage.html"-->
+        </div>
+
+        <div id="alternativeMenu" class="dropdown">
+            <button class="dropbtn">Meni</button>
+            <div class="dropdown-content">
+                <a href="mainPage.html#aboutUsCaption">O nama</a>
+                <a href="mainPage.html#uslugeCaption">Usluge</a>
+                <a href="prijava.html">Prijava</a>
+            </div>
+        </div> <br>
+        Skromni sponzor roditelja i učenika.
+    </div>
+    <div class="column two"><h2> <a id="aboutUsLink" href="mainPage.html#aboutUsCaption">O nama</a> </h2></div> <!--O nama-->
+    <div class="column two"> <!--Usluge-->
+        <div class="dropdown">
+            <button id="realMenu" class="dropbtn">Usluge</button> <!-- Napraviti skriptu za poziv stranice href="mainPage.html#usluge"-->
+            <div class="dropdown-content">
+                <a href="kupi.html">Kupi</a>
+                <a href="prodaj.html">Prodaj/zamjeni</a>
+            </div>
+        </div>
+    </div>
+    <div class="column two"><h2> <a id="prijavaLink" href="prijava.html">Prijava</a></h2></div> <!--Prijava-->
+
+</div>
+
+<!--Prodaja naslov-->
+<div class="row">
+    <div id="prodajaNaslov" class="column three"><h3>Prodaja</h3></div>
+</div>
+
+<!--Unos podataka-->
+<form>
+    <div class="row one">
+        <div class="column four right"><h3>Naziv udžbenika:</h3></div>
+        <div class="column four left"><h3><input type="text" name="naziv"></h3></div>
+    </div>
+    <div class="row one">
+        <div class="column four right"><h3>Škola:</h3></div>
+        <div class="column four left">
+            <h3><input type="radio" name="skola">Osnovna</h3>
+            <h3><input type="radio" name="skola">Srednja</h3>
+        </div>
+    </div>
+    <div class="row one">
+        <div class="column four right"><h3>Predmet:</h3></div>
+        <div class="column four left"><h3><input type="text" name="predmet"></h3></div>
+    </div>
+    <div class="row one">
+        <div class="column four right"><h3>Godina izdavanja:</h3></div>
+        <div class="column four left"><h3><input type="text" name="godIzdavanja"></h3></div>
+    </div>
+    <div class="row one">
+        <div class="column four right"><h3>Stanje knjige:</h3></div>
+        <div class="column four left">
+            <h3><input type="radio" name="stanjeKnjige">Nova</h3>
+            <h3><input type="radio" name="stanjeKnjige">Stara</h3>
+        </div>
+    </div>
+    <div class="row one">
+        <div class="column four right"><h3>Cijena:</h3></div>
+        <div class="column four left"><h3><input type="text" name="eMail"></h3></div>
+    </div>
+    <div class="row one">
+        <div class="column four right"><h3>Mogućnost razmjene:</h3></div>
+        <div class="column four left">
+            <h3><input type="radio" name="razmjena">Da</h3>
+            <h3><input type="radio" name="razmjena">Ne</h3>
+        </div>
+    </div>
+    <div class="row one">
+        <div id="potvrdaRow" class="column three"><h3> <input id="potvrdaButton" type="submit" value="Prodaj"> </h3></div>
+    </div>
+</form>
+
+<div class="row">
+    <div id="copyright" class="column three">Made with ♥ by Amer Šurković in Sarajevo. ©</div>
+</div>
+
+</BODY>
+
 </html>

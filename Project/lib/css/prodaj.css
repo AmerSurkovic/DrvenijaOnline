@@ -16,6 +16,7 @@ body{
     margin: 0;
 }
 
+
 .row{
     padding: 10px;
     width: 100%;
@@ -66,17 +67,13 @@ body{
     width: 70%;
 }
 
-#aboutUs{
-    text-align: center;
+#meni{
+    background-color: white;
 }
 
 #moto{
     color: darkred;
     font-size: 20px;
-}
-
-#logo{
-    color: darkred;
 }
 
 #homeLink{
@@ -99,27 +96,9 @@ body{
     color: black;
 }
 
-#prijavaLink1{
-    color: darkred;
-}
-
-#registracijaNaslov{
+#prodajaNaslov{
     background-color: darkred;
     color: white;
-    text-align: center;
-}
-
-#prijava{
-    color: darkred;
-}
-
-#arrow{
-    vertical-align: middle;
-    height: 30px;
-    width: 30px;
-}
-
-#potvrdaRow{
     text-align: center;
 }
 
@@ -137,6 +116,15 @@ body{
     color: white;
     padding: 16px;
     font-size: 22px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn.one{
+    background-color: darkred;
+    color: white;
+    padding: 16px;
+    font-size: 18px;
     border: none;
     cursor: pointer;
 }
@@ -165,19 +153,25 @@ body{
 
 .dropdown:hover .dropdown-content {
     display: block;
+    z-index: 1;
 }
 
 .dropdown:hover .dropbtn {
     background-color: darkred;
 }
 
+#alternativeMenu{
+    visibility: hidden;
+}
+
+#potvrdaRow{
+    text-align: center;
+}
+
 #copyright{
     color: darkred;
 }
 
-#alternativeMenu{
-    visibility: hidden;
-}
 
 @media screen and (max-width: 1000px){
     p{
@@ -196,6 +190,13 @@ body{
     }
     #realMenu{
         visibility: hidden;
+    }
+    #kategorije{
+        visibility: hidden;
+    }
+    .dropbtn.one{
+        background-color: white;
+        color: darkred;
     }
 }
 
