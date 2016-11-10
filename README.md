@@ -39,6 +39,7 @@ Odgovarajući css fajlovi(dostupni u folderu "Project/lib/css"):
   * Imenovanje varijabli treba preurediti da budu konzistentni jer sam koristio nazive koji su ili engleski ili bosanski ili miks to dvoje.
 
 **III - Bug-ovi koje ste primijetili ali niste stigli ispraviti, a znate rješenje (opis rješenja)**
+  * Na mainPage-u kada pritisnem "O nama" u meniju stranica scrolla na sekciju "O nama" ali prekrije naslov i jedan dio teksta. To je zato što sam stavio da mi je red "meni" position: fixed. *Ovo ću riješiti JavaScriptom da kada se pozove klik "O nama" stranica će se spustiti na datu poziciju i podići funkcijom par piksela prema gore da se dobije željeni efekat.
 
 Navedeno pod III:
   * Linkovanje sa dugmadi "Drvenija.ba" na početnu mainPage.html nije dostupno (na samoj glavnoj stranici te na svim podstranicama. **Potrebno je koristiti JavaScript** Isto vrijedi za dugmad "Prodaj/razmjeni" te "Kupi" na mainPage.html
