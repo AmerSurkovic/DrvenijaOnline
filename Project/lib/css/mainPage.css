@@ -215,6 +215,10 @@ body{
 }
 
 @media screen and (max-width: 1000px){
+    p{
+        text-align: justify;
+        padding-left: 2%;
+    }
     #aboutUsLink{
         visibility: hidden;
     }
@@ -234,9 +238,14 @@ body{
     #naslovZaSlikuINHERIT{
         visibility: visible;
     }
+
 }
 
 @media screen and (max-width: 510px){
+    p{
+        text-align: justify;
+        padding-left: 2%;
+    }
     html{
         display: table;
     }
@@ -259,5 +268,4 @@ body{
     #naslovZaSlikuINHERIT{
         visibility: visible;
     }
-
 }

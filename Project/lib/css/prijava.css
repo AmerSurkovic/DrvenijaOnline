@@ -182,6 +182,10 @@ body{
     #aboutUsLink{
         visibility: hidden;
     }
+    p{
+        text-align: justify;
+        padding-left: 2%;
+    }
     #prijavaLink{
         visibility: hidden;
     }
@@ -197,6 +201,10 @@ body{
 @media screen and (max-width: 510px){
     html{
         display: table;
+    }
+    p{
+        text-align: justify;
+        padding-left: 2%;
     }
     #aboutUsLink{
         visibility: hidden;
