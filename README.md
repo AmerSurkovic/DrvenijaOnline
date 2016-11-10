@@ -19,22 +19,23 @@ Mockup skice stranica(dostupni u folderu "Skice"):
   * prijava.html
   * registracija.html
   * kupi.html
+  * prodaj.html
  
 Odgovarajući css fajlovi(dostupni u folderu "Project/lib/css"):
   * mainPage.css
   * prijava.css
   * registracija.css
   * kupi.css
+  * prodaj.css
   
 **Dodatni komentari:**
   * Sve stranice su urađene po pravilima responzivnog dizajna i imaju grid view.
   * Korišten je media query na svim stranicama za kreiranje izgleda za mobilne uređaje. Pri sužavanju ekrana elementi menija inače prikazani u gornjem desnom uglu se smještaju u dropdown meni "Meni".
   * Meni web stranice je konzistentan (bez glitcheva) i prisutan na svim podstranicama te je prilagođen mobilnim uređajima.
   * HTML i CSS su formatirani i validirani.
-  * Implementirane su 3 html  forme (Registracija(registracija.html), Prijava(prijava.html) i Pretraga(kupi.html))
+  * Implementirane su 4 html  forme (Registracija(registracija.html), Prijava(prijava.html), Pretraga(kupi.html) i Prodaj(prodaj.html)
   
 **II  - Šta nije urađeno?**
-  * Nije urađena html stranica "kupi.html".
   * Linkovanje sa dugmadi "Drvenija.ba" na početnu mainPage.html nije dostupno (na samoj glavnoj stranici te na svim podstranicama. **Potrebno je koristiti JavaScript** Isto vrijedi za dugmad "Prodaj/razmjeni" te "Kupi" na mainPage.html
   * Imenovanje varijabli treba preurediti da budu konzistentni jer sam koristio nazive koji su ili engleski ili bosanski ili miks to dvoje.
 
@@ -67,10 +68,12 @@ Folder Project:
   * prijava.html (Prijava korisnika)
   * registracija.html (Registracija korisnika)
   * kupi.html (Kupovina ili razmjena knjiga)
+  * prodaj.html (Prodaja knjige)
  
 Folder Project/lib/css:
   * mainPage.css
   * prijava.css
   * registracija.css
   * kupi.css
+  * prodaj.css
 
