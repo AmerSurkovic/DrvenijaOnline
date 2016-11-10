@@ -215,3 +215,23 @@ body{
         color: darkred;
     }
 }
+
+@media screen and (max-width: 510px){
+    html{
+        display: table;
+    }
+    #aboutUsLink{
+        visibility: hidden;
+    }
+    #prijavaLink{
+        visibility: hidden;
+    }
+    #alternativeMenu{
+        visibility: visible;
+        padding-top: 2%;
+    }
+    #realMenu{
+        visibility: hidden;
+    }
+
+}
