@@ -9,10 +9,12 @@ Mockup skice stranica(dostupni u folderu "Skice"):
   * mainPage_mobilna
   * prijava
   * prijava_mobilna
-  * prodaja
-  * prodaja_mobilna
   * registracija
   * registracija_mobilna
+  * prodaja
+  * prodaja_mobilna
+  * kupovina
+  * kupovina_mobilna
 
 .html stranice(dostupni u folderu "Project"):
   * mainPage.html
@@ -60,6 +62,8 @@ Folder Skice:
   * prijava_mobilna (Skica stranice za prijavu korisnika za mobilne uređaje)
   * prodaja (Skica stranice za prodaju knjiga te moguću razmjenu)
   * prodaja_mobilna (Skica stranice prodaje prilagođena mobilnim uređajima)
+  * kupovina (Skica stranice za kupovinu knjiga)
+  * kupovina_mobilna (Skice mobilne stranice za kupovinu knjiga)
   * registracija (Skica stranice za registraciju korisnika)
   * registracija_mobilna (Skica stranice registracije prilagođena mobilnim uređajima)
 
