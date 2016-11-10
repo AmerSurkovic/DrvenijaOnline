@@ -3,6 +3,12 @@
     font-family: Lato, sans-serif;
 }
 
+html{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
 body{
     width: 100%;
     min-width: 500px;
@@ -228,4 +234,30 @@ body{
     #naslovZaSlikuINHERIT{
         visibility: visible;
     }
+}
+
+@media screen and (max-width: 510px){
+    html{
+        display: table;
+    }
+    #aboutUsLink{
+        visibility: hidden;
+    }
+    #prijavaLink{
+        visibility: hidden;
+    }
+    #alternativeMenu{
+        visibility: visible;
+        padding-top: 2%;
+    }
+    #realMenu{
+        visibility: hidden;
+    }
+    #naslovZaSliku{
+        visibility: hidden;
+    }
+    #naslovZaSlikuINHERIT{
+        visibility: visible;
+    }
+
 }
