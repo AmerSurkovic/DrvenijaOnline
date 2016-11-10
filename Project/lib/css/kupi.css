@@ -125,7 +125,6 @@ body{
     width: 30px;
 }
 
-/* Button */
 .dropbtn {
     background-color: darkred;
     color: white;
@@ -144,13 +143,11 @@ body{
     cursor: pointer;
 }
 
-/* The container <div> - needed to position the dropdown content */
 .dropdown {
     position: relative;
     display: inline-block;
 }
 
-/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
     position: absolute;
@@ -159,7 +156,6 @@ body{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
-/* Links inside the dropdown */
 .dropdown-content a {
     color: black;
     padding: 12px 16px;
@@ -167,15 +163,12 @@ body{
     display: block;
 }
 
-/* Change color of dropdown links on hover */
 .dropdown-content a:hover {background-color: #f1f1f1}
 
-/* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
 }
 
-/* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
     background-color: darkred;
 }
