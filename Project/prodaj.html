@@ -5,16 +5,16 @@
     <title>Prodaj ba</title>
     <link rel="stylesheet" href="lib/css/prodaj.css">
     <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <script src="lib/js/prodaj.js"></script>
 </head>
 
 <BODY>
 
-<!--Meni-->
+<!--Meni
 <div id="meni" class="row">
     <div id="moto" class="column one">
         <div class="dropdown">
-            <button class="dropbtn">Drvenija.ba</button> <!-- Napraviti skriptu za poziv stranice href="mainPage.html"-->
-        </div>
+            <button class="dropbtn">Drvenija.ba</button>
 
         <div id="alternativeMenu" class="dropdown">
             <button class="dropbtn">Meni</button>
@@ -26,19 +26,20 @@
         </div> <br>
         Skromni sponzor roditelja i učenika.
     </div>
-    <div class="column two"><h2> <a id="aboutUsLink" href="mainPage.html#aboutUsCaption">O nama</a> </h2></div> <!--O nama-->
-    <div class="column two"> <!--Usluge-->
+    <div class="column two"><h2> <a id="aboutUsLink" href="mainPage.html#aboutUsCaption">O nama</a> </h2></div>
+    <div class="column two">
         <div class="dropdown">
-            <button id="realMenu" class="dropbtn">Usluge</button> <!-- Napraviti skriptu za poziv stranice href="mainPage.html#usluge"-->
+            <button id="realMenu" class="dropbtn">Usluge</button>
             <div class="dropdown-content">
                 <a href="kupi.html">Kupi</a>
                 <a href="prodaj.html">Prodaj/zamjeni</a>
             </div>
         </div>
     </div>
-    <div class="column two"><h2> <a id="prijavaLink" href="prijava.html">Prijava</a></h2></div> <!--Prijava-->
+    <div class="column two"><h2> <a id="prijavaLink" href="prijava.html">Prijava</a></h2></div>
 
 </div>
+-->
 
 <!--Prodaja naslov-->
 <div class="row">
@@ -49,44 +50,48 @@
 <form>
     <div class="row one">
         <div class="column four right"><h3>Naziv udžbenika:</h3></div>
-        <div class="column four left"><h3><input type="text" name="naziv"></h3></div>
+        <div class="column four left"><h3><input type="text" name="naziv" id="naziv" placeholder="npr. Vene II" oninvalid="invalidName()" oninput="invalidName()" autofocus required>
+            <span class="icon-validation" data-icon="&#10004"></span></h3>
+        </div>
     </div>
     <div class="row one">
         <div class="column four right"><h3>Škola:</h3></div>
         <div class="column four left">
-            <h3><input type="radio" name="skola">Osnovna</h3>
-            <h3><input type="radio" name="skola">Srednja</h3>
+            <h3><input type="radio" name="skola" required>Osnovna</h3>
+            <h3><input type="radio" name="skola" required>Srednja</h3>
         </div>
     </div>
     <div class="row one">
         <div class="column four right"><h3>Predmet:</h3></div>
-        <div class="column four left"><h3><input type="text" name="predmet"></h3></div>
+        <div class="column four left"><h3><input type="text" name="predmet" id="predmet" placeholder="npr. Historija" oninvalid="invalidSubject()" oninput="invalidSubject()" autofocus required>
+            <span class="icon-validation" data-icon="&#10004"></span></h3>
+        </div>
     </div>
     <div class="row one">
         <div class="column four right"><h3>Godina izdavanja:</h3></div>
-        <div class="column four left"><h3><input type="text" name="godIzdavanja"></h3></div>
+        <div class="column four left"><h3><input type="number" min="1990" name="godIzdavanja" placeholder="npr. 2015" required></h3></div>
     </div>
     <div class="row one">
         <div class="column four right"><h3>Stanje knjige:</h3></div>
         <div class="column four left">
-            <h3><input type="radio" name="stanjeKnjige">Nova</h3>
-            <h3><input type="radio" name="stanjeKnjige">Stara</h3>
+            <h3><input type="radio" name="stanjeKnjige" required>Nova</h3>
+            <h3><input type="radio" name="stanjeKnjige" required>Stara</h3>
         </div>
     </div>
     <div class="row one">
         <div class="column four right"><h3>Cijena:</h3></div>
-        <div class="column four left"><h3><input type="text" name="eMail"></h3></div>
+        <div class="column four left"><h3><input type="number" min="0" name="cijena" placeholder="u KM" required></h3></div>
     </div>
     <div class="row one">
         <div class="column four right"><h3>Mogućnost razmjene:</h3></div>
         <div class="column four left">
-            <h3><input type="radio" name="razmjena">Da</h3>
-            <h3><input type="radio" name="razmjena">Ne</h3>
+            <h3><input type="radio" name="razmjena" required>Da</h3>
+            <h3><input type="radio" name="razmjena" required>Ne</h3>
         </div>
     </div>
     <div class="row one">
         <div class="column four right"><h3>Dodaj sliku:</h3></div>
-        <div class="column four left"><h3><input type="button" name="predmet" value="Browse..."></h3></div>
+        <div class="column four left"><h3><input type="button" name="predmet" value="Pretraži..."></h3></div>
     </div>
     <div class="row one">
         <div id="potvrdaRow" class="column three"><h3> <input id="potvrdaButton" type="submit" value="Prodaj"> </h3></div>

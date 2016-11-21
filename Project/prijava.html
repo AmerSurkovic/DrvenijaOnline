@@ -5,15 +5,16 @@
     <title>Prijava ba</title>
     <link rel="stylesheet" href="lib/css/prijava.css">
     <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <script src="lib/js/prijava.js"></script>
 </head>
 
 <BODY>
 
-<!--Meni-->
+<!--Meni
 <div id="meni" class="row">
     <div id="moto" class="column one">
         <div class="dropdown">
-            <button class="dropbtn">Drvenija.ba</button> <!-- Napraviti skriptu za poziv stranice href="mainPage.html"-->
+            <button class="dropbtn">Drvenija.ba</button>
         </div>
 
         <div id="alternativeMenu" class="dropdown">
@@ -26,25 +27,25 @@
         </div> <br>
         Skromni sponzor roditelja i učenika.
     </div>
-    <div class="column two"><h2> <a id="aboutUsLink" href="mainPage.html#aboutUsCaption">O nama</a> </h2></div> <!--O nama-->
-    <div class="column two"> <!--Usluge-->
+    <div class="column two"><h2> <a id="aboutUsLink" href="mainPage.html#aboutUsCaption">O nama</a> </h2></div>
+    <div class="column two">
         <div class="dropdown">
-            <button id="realMenu" class="dropbtn">Usluge</button> <!-- Napraviti skriptu za poziv stranice href="mainPage.html#usluge"-->
+            <button id="realMenu" class="dropbtn">Usluge</button>
             <div class="dropdown-content">
                 <a href="kupi.html">Kupi</a>
                 <a href="prodaj.html">Prodaj/zamjeni</a>
             </div>
         </div>
     </div>
-    <div class="column two"><h2> <a id="prijavaLink" href="prijava.html">Prijava</a></h2></div> <!--Prijava-->
+    <div class="column two"><h2> <a id="prijavaLink" href="prijava.html">Prijava</a></h2></div>
 
-</div>
+</div>-->
 
 <!--Korisnik nije prijavljen-->
 <div class="row">
     <div id="registracija" class="column three"><h3>Nemate korisnički račun?
-        <a id="registracijaLink" href="registracija.html">Registrujte se!</a>
-        <img id="arrow" src="Pictures/arrowImg.png">
+        <a id="registracijaLink" onclick="loadSubPage('registracija.html')">Registrujte se!</a>
+        <!--<img id="arrow" src="Pictures/arrowImg.png">-->
     </h3>
     </div>
 </div>

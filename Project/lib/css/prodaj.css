@@ -172,6 +172,14 @@ body{
     color: darkred;
 }
 
+:valid + .icon-validation::before {
+    content: attr(data-icon);
+    color: green;
+}
+
+input:valid {
+    border: 2px solid green;
+}
 
 @media screen and (max-width: 1000px){
     p{

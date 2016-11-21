@@ -5,15 +5,18 @@
     <title>Kupi ba</title>
     <link rel="stylesheet" href="lib/css/kupi.css">
     <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+
+    <script src="lib/js/kupi.js"></script>
+
 </head>
 
 <BODY>
 
-<!--Meni-->
+<!--Meni
 <div id="meni" class="row">
     <div id="moto" class="column one">
         <div class="dropdown">
-            <button class="dropbtn">Drvenija.ba</button> <!-- Napraviti skriptu za poziv stranice href="mainPage.html"-->
+            <button class="dropbtn">Drvenija.ba</button>
         </div>
 
         <div id="alternativeMenu" class="dropdown">
@@ -26,27 +29,60 @@
         </div> <br>
         Skromni sponzor roditelja i učenika.
     </div>
-    <div class="column two"><h2> <a id="aboutUsLink" href="mainPage.html#aboutUsCaption">O nama</a> </h2></div> <!--O nama-->
-    <div class="column two"> <!--Usluge-->
+    <div class="column two"><h2> <a id="aboutUsLink" href="mainPage.html#aboutUsCaption">O nama</a> </h2></div>
+    <div class="column two">
         <div class="dropdown">
-            <button id="realMenu" class="dropbtn">Usluge</button> <!-- Napraviti skriptu za poziv stranice href="mainPage.html#usluge"-->
+            <button id="realMenu" class="dropbtn">Usluge</button>
             <div class="dropdown-content">
                 <a href="kupi.html">Kupi</a>
                 <a href="prodaj.html">Prodaj/zamjeni</a>
             </div>
         </div>
     </div>
-    <div class="column two"><h2> <a id="prijavaLink" href="prijava.html">Prijava</a></h2></div> <!--Prijava-->
+    <div class="column two"><h2> <a id="prijavaLink" href="prijava.html">Prijava</a></h2></div>
 
 </div>
+-->
 
 <!--Listing-->
 <div class="row">
     <div class="column four">
         <div id="ponude" class="row"><h3>Aktuelne ponude</h3></div>
         <form>
-        <div id="pretraga" class="row two">Pretraga: <input type="search" name="search"> <img id="arrow" src="Pictures/arrowImg.png"></div>
+        <div id="pretraga" class="row two">Pretraga: <input type="search" name="search">
+            <!--<img id="arrow" src="Pictures/arrowImg.png">-->
+        </div>
         </form>
+
+        <div class="row one">
+            <div class="column seven">
+                <div class="gallery" align="center">
+                    <h3 id="mostWantedTitle">Najtraženije</h3>
+                    <div class="thumbnails">
+                        <img onmouseover="preview.src=img1.src" name="img1" src="Pictures/bosanski.jpg" alt="" />
+                        <img onmouseover="preview.src=img2.src" name="img2" src="Pictures/mojaOkolina.jpg" alt="" />
+                        <img onmouseover="preview.src=img3.src" name="img3" src="Pictures/matematika2.jpg" alt="" />
+                        <img onmouseover="preview.src=img4.src" name="img4" src="Pictures/historija.jpg" alt="" />
+                        <img onmouseover="preview.src=img5.src" name="img5" src="Pictures/biologija.jpg" alt="" />
+                    </div>
+                    <div class="preview">
+                        <img name="preview" id="previewImage" onclick="load()" src="Pictures/historija.jpg" alt=""/>
+                        <h3 id="opis"><span class="spacer">Cijena: 7KM</span><br>
+                            <span class="spacer">Lokacija: Sarajevo</span>
+                        </h3>
+                    </div>
+                </div> <!-- Close the gallery div -->
+
+                <div id="openModal" class="modalDialog">
+                    <div class="column seven">
+                        <a href="#close" id="Close" title="Close" class="close">X</a>
+                        <img name="fullScreen" id="fullScreen" src="" alt="">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
         <div class="row one">
             <div class="column five">
                 <img src="Pictures/matematika2.jpg">
