@@ -27,7 +27,7 @@ function invalidSubject(){
     var predmetObject = document.getElementById('predmet');
 
     if(predmetValue==''){
-        predmetObject.setCustomValidity('Potrebno je unijeti naziv predmet udžbenika');
+        predmetObject.setCustomValidity('Potrebno je unijeti naziv predmeta udžbenika');
     }
     else if(!regexNaziv.test(predmetValue)){
         predmetObject.setCustomValidity('Forma unesenog naziva predmeta udžbenika nije ispravna');
