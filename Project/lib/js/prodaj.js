@@ -5,7 +5,7 @@
 
 var regexNaziv = /^[A-Za-z0-9 ]{3,20}$/;
 
-function invalidName(){
+function invalidBookName(){
     var nazivValue = document.getElementById('naziv').value;
     var nazivObject = document.getElementById('naziv');
 

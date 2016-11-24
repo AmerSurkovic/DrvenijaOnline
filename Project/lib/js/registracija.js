@@ -21,7 +21,7 @@ function invalidName(){
     var imeValue = document.getElementById('ime').value;
     var imeObject = document.getElementById('ime');
 
-    if(imeValue==''){
+    if(imeValue=='' || imeValue==null){
         imeObject.setCustomValidity('Potrebno je unijeti ime');
     }
     else if(!regexNaziv.test(imeValue)){

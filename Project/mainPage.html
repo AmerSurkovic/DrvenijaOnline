@@ -16,7 +16,6 @@
 
 <BODY>
 
-<!--URADITI LINKOVANJE NA DUGMAD sa JavaScriptom!!-->
 <!--Meni-->
 <div id="meni" class="row">
     <div id="moto" class="column one">
@@ -24,14 +23,17 @@
             <button id="glavna" class="dropbtn" onclick="refresh()">Drvenija.ba</button> <!-- Napraviti skriptu za poziv stranice href="mainPage.html"-->
         </div>
 
-        <div id="alternativeMenu" class="dropdown">
-            <button class="dropbtn">Meni</button>
-            <div class="dropdown-content">
-                <a id="scrollOnAboutUs">O nama</a> <!--href="#aboutUsCaption"-->
-                <a href="#uslugeCaption">Usluge</a>
-                <a onclick="loadSubPage('prijava.html')">Prijava</a>
+        <div class="dropdownJS">
+            <button onclick="myFunction()" class="dropbtnJS">Meni</button>
+            <div id="myDropdownJS" class="dropdownJS-content">
+                <input type="text" placeholder="Pretraži.." id="myInput" onkeyup="filterFunction()">
+                <a href="javascript:loadSubPage('prijava.html')">Prijava</a>
+                <a href="javascript:loadSubPage('registracija.html')">Registracija</a>
+                <a href="javascript:loadSubPage('kupi.html')">Kupi</a>
+                <a href="javascript:loadSubPage('prodaj.html')">Prodaj</a>
             </div>
-        </div> <br>
+        </div>
+        <br>
         Skromni sponzor roditelja i učenika.
     </div>
     <div class="column two"><h2> <a id="aboutUsLink" href="#aboutUsCaption">O nama</a> </h2></div> <!--O nama-->
@@ -39,12 +41,12 @@
         <div class="dropdown">
             <button id="realMenu" class="dropbtn">Usluge</button> <!-- Napraviti skriptu za poziv stranice href="mainPage.html#usluge"-->
             <div class="dropdown-content">
-                <a onclick="loadSubPage('kupi.html')">Kupi</a>
-                <a onclick="loadSubPage('prodaj.html')">Prodaj/zamjeni</a>
+                <a href="javascript:loadSubPage('kupi.html')">Kupi</a>
+                <a href="javascript:loadSubPage('prodaj.html')">Prodaj/zamjeni</a>
             </div>
         </div>
     </div>
-    <div class="column two"><h2> <a id="prijavaLink" onclick="loadSubPage('prijava.html')">Prijava</a></h2></div> <!--Prijava-->
+    <div class="column two"><h2> <a id="prijavaLink" href="javascript:loadSubPage('prijava.html')">Prijava</a></h2></div> <!--Prijava-->
 
 </div>
 
@@ -109,7 +111,7 @@
                 Cras semper nisl non blandit tempus. Mauris sed nibh sollicitudin, tristique neque ac, auctor nibh. Ut eu dui in erat porttitor interdum id vitae ex. Aliquam erat volutpat. Vivamus ut ligula maximus, congue tellus id, bibendum nulla. Aenean a arcu leo. Aenean lacus dui, convallis ut viverra at, ultricies sit amet sapien. Aliquam malesuada ornare condimentum. Nulla mattis eleifend venenatis. Donec feugiat turpis vel semper condimentum. Nulla finibus tempus ante quis ullamcorper. Nulla sagittis pulvinar augue nec maximus. Mauris sodales massa et ligula tincidunt pretium ullamcorper vitae massa.
             </p>
             <p id="prodajLine">
-                <button class="dropbtn"> <a id="prodajButton" href="prodaj.html">Prodaj/razmjeni</a></button>
+                <button class="dropbtn"> <a id="prodajButton" href="javascript:loadSubPage('prodaj.html')">Prodaj/razmjeni</a></button>
             </p>
         </div>
         <div class="column four">
@@ -122,7 +124,7 @@
                 Vivamus venenatis bibendum dolor non interdum. Phasellus felis augue, iaculis vitae rhoncus nec, efficitur vitae massa. Sed sit amet est felis. Morbi cursus non orci a pellentesque. Donec fermentum diam tellus, fringilla vehicula tortor aliquam vel. Vivamus vitae dui mi. Nullam quis dignissim risus. Nulla sem augue, commodo in ex in, lacinia tincidunt massa. Etiam sit amet commodo elit. Sed eleifend laoreet euismod. Quisque fringilla scelerisque tristique. Cras lobortis dignissim lectus eu consectetur. Ut bibendum molestie tellus aliquet accumsan. Cras convallis nisl eget scelerisque dapibus.
             </p>
             <p id="kupiLine">
-                <button class="dropbtn"><a id="kupiButton" href="kupi.html">Kupi</a></button>
+                <button class="dropbtn"><a id="kupiButton" href="javascript:loadSubPage('kupi.html')">Kupi</a></button>
             </p>
         </div>
     </div>

@@ -218,6 +218,55 @@ body{
     width: 100%;
 }
 
+.dropbtnJS {
+    background-color: darkred;
+    color: white;
+    padding: 16px;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtnJS:hover, .dropbtnJS:focus {
+    background-color: darkred;
+}
+
+#myInput {
+    border-box: box-sizing;
+    background-position: 14px 12px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 14px 20px 12px 45px;
+    border: none;
+}
+
+.dropdownJS {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdownJS-content {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 230px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    Z-index:1;
+}
+
+.dropdownJS-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+}
+
+.dropdownJS a:hover {background-color: #ddd}
+
+.show {display:block;}
+
 @media screen and (max-width: 1000px){
     p{
         text-align: justify;

@@ -45,7 +45,7 @@
 <!--Korisnik je prijavljen-->
 <div class="row">
     <div id="prijava" class="column three"><h3>Već imate korisnički račun?
-        <a id="prijavaLink1" onclick="loadSubPage('prijava.html')">Prijavite se!</a>
+        <a id="prijavaLink1" href="javascript:loadSubPage('prijava.html')"><u>Prijavite se!</u></a>
         <!--<img id="arrow" src="Pictures/arrowImg.png">-->
     </h3>
     </div>
@@ -85,7 +85,7 @@
     </div>
     <div class="row one">
         <div class="column four right"><h3>E-mail adresa:</h3></div>
-        <div class="column four left"><h3><input type="email" name="eMail" id="eMail" oninvalid="invalidMail()" oninput="invalidMail()" autofocus required>
+        <div class="column four left"><h3><input type="text" name="eMail" id="eMail" oninvalid="invalidMail()" oninput="invalidMail()" autofocus required>
             <span class="icon-validation" data-icon="&#10004"></span></h3></div>
     </div>
     <div class="row one">
@@ -99,17 +99,17 @@
             <span class="icon-validation" data-icon="&#10004"></span></h3></div>
     </div>
     <div class="row one">
-        <div id="potvrdaRow" class="column three"><h3> <input id="potvrdaButton" type="button" value="Registruj se" onclick="window.location.href='#openModal'"> </h3></div>
+        <div id="potvrdaRow" class="column three"><h3> <input id="potvrdaButton" type="submit" value="Registruj se"> </h3></div>
     </div>
 
-    <div id="openModal" class="modalDialog">
+  <!--  <div id="openModal" class="modalDialog">
         <div>
             <h2>Drvenija.ba</h2>
             <p>Poštovani, hvala Vam na registraciji.</p>
             <p>Iskoristite vaš korisnički račun i počnite sa kupovinom, prodajom i razmjenom udžbenika.</p>
             <p id="prijavaAllign"><input id="prijaviSe" type="submit" value="Prijavi se" onclick="window.location.href='#close'"></p>
         </div>
-    </div>
+    </div>-->
 
 </form>
 
