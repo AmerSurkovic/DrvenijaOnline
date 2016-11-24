@@ -4,6 +4,7 @@
  */
 
 var regexNaziv = /^[A-Za-z0-9 ]{3,20}$/;
+var regexBroj = /^[0-9 ]$/;
 
 function invalidBookName(){
     var nazivValue = document.getElementById('naziv').value;
@@ -35,4 +36,43 @@ function invalidSubject(){
         predmetObject.setCustomValidity('')
     }
     return true;
+}
+
+function invalidPublishingYear(){
+    var godIzdavanjaValue = document.getElementById('godIzdavanja').value;
+    var godIzdavanjaObject = document.getElementById('godIzdavanja');
+
+    if(godIzdavanjaValue==''){
+        godIzdavanjaObject.setCustomValidity('Potrebno je unijeti godinu izdavanja. Minimalna godina je 1990');
+    }
+    if(godIzdavanjaValue<1990){
+        godIzdavanjaObject.setCustomValidity('Potrebno je unijeti godinu izdavanja. Minimalna godina je 1990');
+    }
+    else{
+        godIzdavanjaObject.setCustomValidity('')
+    }
+    return true;
+}
+
+function invalidPrice(){
+    var cijenaValue = document.getElementById('cijena').value;
+    var cijenaObject = document.getElementById('cijena');
+
+    if(cijenaValue=='' || cijenaValue==null){
+        cijenaObject.setCustomValidity('Potrebno je unijeti cijenu knjige. Minimalna cijena je 1KM. Ako poklanjate knjigu, cijenu postavite na 0KM');
+    }
+    else if(cijenaValue<0){
+        cijenaObject.setCustomValidity('Potrebno je unijeti cijenu knjige. Minimalna cijena je 1KM. Ako poklanjate knjigu, cijenu postavite na 0KM');
+    }
+    else if(!regexBroj.test(cijenaValue)){
+        cijenaObject.setCustomValidity('Unesite brojčanu vrijednost.');
+    }
+    else{
+        cijenaObject.setCustomValidity('')
+    }
+    return true;
+}
+
+function alertProdaja(){
+    alert("Uspješno ste postavili knjigu za prodaju.");
 }

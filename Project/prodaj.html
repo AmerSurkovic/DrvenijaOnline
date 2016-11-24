@@ -47,7 +47,7 @@
 </div>
 
 <!--Unos podataka-->
-<form>
+<form onsubmit="alertProdaja()">
     <div class="row one">
         <div class="column four right"><h3>Naziv udžbenika:</h3></div>
         <div class="column four left"><h3><input type="text" name="naziv" id="naziv" placeholder="npr. Vene II" oninvalid="invalidBookName()" oninput="invalidBookName()" autofocus required>
@@ -69,7 +69,7 @@
     </div>
     <div class="row one">
         <div class="column four right"><h3>Godina izdavanja:</h3></div>
-        <div class="column four left"><h3><input type="number" min="1990" name="godIzdavanja" placeholder="npr. 2015" required></h3></div>
+        <div class="column four left"><h3><input type="number" min="1990" id="godIzdavanja" name="godIzdavanja" placeholder="npr. 2015" oninvalid="invalidPublishingYear()" oninput="invalidPublishingYear()" autofocus required></h3></div>
     </div>
     <div class="row one">
         <div class="column four right"><h3>Stanje knjige:</h3></div>
@@ -80,7 +80,7 @@
     </div>
     <div class="row one">
         <div class="column four right"><h3>Cijena:</h3></div>
-        <div class="column four left"><h3><input type="number" min="0" name="cijena" placeholder="u KM" required></h3></div>
+        <div class="column four left"><h3><input type="number" min="0" id="cijena" name="cijena" placeholder="u KM" oninvalid="invalidPrice()" oninput="invalidPrice()" autofocus required></h3></div>
     </div>
     <div class="row one">
         <div class="column four right"><h3>Mogućnost razmjene:</h3></div>

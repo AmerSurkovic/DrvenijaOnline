@@ -155,3 +155,7 @@ function invalidRepeatPassword(){
     }
     return true;
 }
+
+function alertRegistracija(){
+    alert("Uspješno ste se registrovali.");
+}

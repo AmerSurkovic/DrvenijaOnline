@@ -57,7 +57,7 @@
 </div>
 
 <!--Unos podataka-->
-<form>
+<form onsubmit="alertRegistracija()">
     <div class="row one">
         <div class="column four right"><h3>Ime:</h3></div>
         <div class="column four left"><h3><input type="text" name="ime" id="ime" oninvalid="invalidName()" oninput="invalidName()" autofocus required>
@@ -85,7 +85,7 @@
     </div>
     <div class="row one">
         <div class="column four right"><h3>E-mail adresa:</h3></div>
-        <div class="column four left"><h3><input type="text" name="eMail" id="eMail" oninvalid="invalidMail()" oninput="invalidMail()" autofocus required>
+        <div class="column four left"><h3><input type="email" name="eMail" id="eMail" oninvalid="invalidMail()" oninput="invalidMail()" autofocus required>
             <span class="icon-validation" data-icon="&#10004"></span></h3></div>
     </div>
     <div class="row one">
@@ -102,7 +102,7 @@
         <div id="potvrdaRow" class="column three"><h3> <input id="potvrdaButton" type="submit" value="Registruj se"> </h3></div>
     </div>
 
-  <!--  <div id="openModal" class="modalDialog">
+    <!--<div id="openModal" class="modalDialog">
         <div>
             <h2>Drvenija.ba</h2>
             <p>Poštovani, hvala Vam na registraciji.</p>
