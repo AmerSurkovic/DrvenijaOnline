@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Drvenija ba</title>
+
+    <link rel="stylesheet" href="lib/css/dropdown.css">
     <link rel="stylesheet" href="lib/css/mainPage.css">
+
     <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 
     <script type="text/javascript" src="lib/js/mainPage.js"></script>
-    <script type="text/javascript" src="lib/js/prijava.js"></script>
-    <script type="text/javascript" src="lib/js/registracija.js"></script>
-    <script type="text/javascript" src="lib/js/kupi.js"></script>
-    <script type="text/javascript" src="lib/js/prodaj.js"></script>
+    <script type="text/javascript" src="lib/js/dropdown.js"></script>
 </head>
 
 <BODY>
@@ -19,19 +19,16 @@
 <!--Meni-->
 <div id="meni" class="row">
     <div id="moto" class="column one">
-       <!-- <div class="dropdown">
-            <button id="glavna" class="dropbtn" onclick="refresh()">Drvenija.ba</button>
-        </div>-->
 
         <div class="dropdownJS">
             <button onclick="myFunction()" class="dropbtnJS">☰ Drvenija.ba</button>
             <div id="myDropdownJS" class="dropdownJS-content">
                 <input type="text" placeholder="Pretraži.." id="myInput" onkeyup="filterFunction()">
                 <a href="mainPage.html">Početna</a>
-                <a href="javascript:loadSubPage('prijava.html')">Prijava</a>
-                <a href="javascript:loadSubPage('registracija.html')">Registracija</a>
-                <a href="javascript:loadSubPage('kupi.html')">Kupi</a>
-                <a href="javascript:loadSubPage('prodaj.html')">Prodaj</a>
+                <a href="prijava.php">Prijava</a>
+                <a href="registracija.php">Registracija</a>
+                <a href="kupi.html">Kupi</a>
+                <a href="prodaj.html">Prodaj</a>
             </div>
         </div>
         <br>
@@ -42,12 +39,12 @@
         <div class="dropdown">
             <button id="realMenu" class="dropbtn">Usluge</button>
             <div class="dropdown-content">
-                <a href="javascript:loadSubPage('kupi.html')">Kupi</a>
-                <a href="javascript:loadSubPage('prodaj.html')">Prodaj/zamjeni</a>
+                <a href="kupi.html">Kupi</a>
+                <a href="prodaj.html">Prodaj/zamjeni</a>
             </div>
         </div>
     </div>
-    <div class="column two"><h2> <a id="prijavaLink" href="javascript:loadSubPage('prijava.html')">👤 Prijava</a></h2></div> <!--Prijava-->
+    <div class="column two"><h2> <a id="prijavaLink" href="prijava.php">👤 Prijava</a></h2></div> <!--Prijava-->
 
 </div>
 

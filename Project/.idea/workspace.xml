@@ -1,0 +1,923 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2c921333-6b3d-4358-ba86-79eeb8b629ec" name="Default" comment="" />
+    <ignored path="Project.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="Project" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="mainPage.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/mainPage.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="77">
+              <caret line="80" column="14" lean-forward="false" selection-start-line="80" selection-start-column="14" selection-end-line="80" selection-end-column="14" />
+              <folding>
+                <element signature="n#div#3;n#div#1;n#BODY#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#div#4;n#div#1;n#BODY#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="prodaj.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/js/prodaj.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mainPage.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/js/mainPage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mainPage.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/css/mainPage.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="236">
+              <caret line="81" column="7" lean-forward="false" selection-start-line="81" selection-start-column="7" selection-end-line="81" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>naziv</find>
+      <find>drv</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Pictures/prodaj.html" />
+        <option value="$PROJECT_DIR$/mainPage.css" />
+        <option value="$PROJECT_DIR$/lib/registracija.html" />
+        <option value="$PROJECT_DIR$/lib/css/prijava.css" />
+        <option value="$PROJECT_DIR$/lib/pop-upWindow.html" />
+        <option value="$PROJECT_DIR$/pop-upWindow.html" />
+        <option value="$PROJECT_DIR$/lib/js/pop-upWindow.js" />
+        <option value="$PROJECT_DIR$/lib/css/pop-upWindow.css" />
+        <option value="$PROJECT_DIR$/lib/js/lr.js" />
+        <option value="$PROJECT_DIR$/lib/css/prodaj.css" />
+        <option value="$PROJECT_DIR$/jquery-1.3.2.min.js" />
+        <option value="$PROJECT_DIR$/lib/test.html" />
+        <option value="$PROJECT_DIR$/lib/css/test.css" />
+        <option value="$PROJECT_DIR$/lib/css/test2.css" />
+        <option value="$PROJECT_DIR$/test.html" />
+        <option value="$PROJECT_DIR$/lib/css/kupi.css" />
+        <option value="$PROJECT_DIR$/lib/js/prijava.js" />
+        <option value="$PROJECT_DIR$/lib/css/registracija.css" />
+        <option value="$PROJECT_DIR$/lib/js/kupi.js" />
+        <option value="$PROJECT_DIR$/kupi.html" />
+        <option value="$PROJECT_DIR$/lib/js/mainPage.js" />
+        <option value="$PROJECT_DIR$/prijava.html" />
+        <option value="$PROJECT_DIR$/prodaj.html" />
+        <option value="$PROJECT_DIR$/lib/js/registracija.js" />
+        <option value="$PROJECT_DIR$/registracija.html" />
+        <option value="$PROJECT_DIR$/lib/js/prodaj.js" />
+        <option value="$PROJECT_DIR$/mainPage.html" />
+        <option value="$PROJECT_DIR$/lib/css/mainPage.css" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="45" />
+    <option name="y" value="24" />
+    <option name="width" value="1875" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="ToolWindowVersion Control.ShowToolbar" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/WebstormProjects/Hackathon" />
+    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="nodejs_interpreter_path" value="/usr/bin/node" />
+    <property name="js.eslint.eslintPackage" value="" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2c921333-6b3d-4358-ba86-79eeb8b629ec" name="Default" comment="" />
+      <created>1478079302720</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1478079302720</updated>
+      <workItem from="1478079304708" duration="22412000" />
+      <workItem from="1478168847740" duration="14000" />
+      <workItem from="1478204063080" duration="73000" />
+      <workItem from="1478251481745" duration="105000" />
+      <workItem from="1478261412231" duration="18066000" />
+      <workItem from="1478453486901" duration="5297000" />
+      <workItem from="1478459114209" duration="14000" />
+      <workItem from="1478459458740" duration="7172000" />
+      <workItem from="1478468597521" duration="196000" />
+      <workItem from="1478476180160" duration="998000" />
+      <workItem from="1478732583743" duration="329000" />
+      <workItem from="1478734106717" duration="662000" />
+      <workItem from="1478775048459" duration="6537000" />
+      <workItem from="1478784422735" duration="5402000" />
+      <workItem from="1478790934684" duration="878000" />
+      <workItem from="1478808485707" duration="165000" />
+      <workItem from="1478863084099" duration="1318000" />
+      <workItem from="1478868359188" duration="1079000" />
+      <workItem from="1478871466233" duration="20377000" />
+      <workItem from="1479118402596" duration="135000" />
+      <workItem from="1479127002047" duration="49000" />
+      <workItem from="1479216909914" duration="48125000" />
+      <workItem from="1479404641382" duration="69000" />
+      <workItem from="1479405429091" duration="14000" />
+      <workItem from="1479744372347" duration="167000" />
+      <workItem from="1479744613545" duration="70000" />
+      <workItem from="1480006357866" duration="16105000" />
+      <workItem from="1480691066729" duration="12517000" />
+    </task>
+    <task id="LOCAL-00001" summary="TestHtml Commit">
+      <created>1478079489259</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1478079489259</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Dizajnirao početnu stranicu (mainPage.html + mainPage.css).&#10;Html fajlove ću čuvati u Project folderu dok će se Javascript i CSS fajlovi nalaziti u odgovarajućim folderima foldera .lib.&#10;&#10;Skice stranica sam radio na papiru te po njima dizajnirao mainPage.html. &#10;Odradit ću ih u nekom mockup toolu pa uploadovati.">
+      <created>1478117253751</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1478117253751</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Dizajnirao i implementirao html i css kod za stranice &quot;Prijava&quot; i &quot;Registracija&quot;.">
+      <created>1478268128145</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1478268128145</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Preuredio dizajn malo. Dodao da mi meni na pocetnoj stranici bude pristuan tokom scrolla. Problem imam kada pritisnem na &quot;O nama&quot; ili &quot;Usluge&quot; na pocetnoj stranici da mi se prikaz spusti preko naslova &quot;O nama&quot; i &quot;Usluge&quot; sto ne bi trebalo. -&gt; To mogu rijesiti preko JavaScripta sa moveY=+100px ali to cu raditi kasnije.&#10;Dodao kupi.html i kupi.css. U kupi.html ce kategorije isto biti uvijek prisutne kod scrolla!">
+      <created>1478282497893</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1478282497893</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Napravio sve .html stranice responzivne uključujući media query. Opcije &quot;O nama&quot;, &quot;Prijava&quot; te &quot;Usluge&quot; se prebacuju u dropdown meni a na .html stranici &quot;Kupi&quot; opcija kategorije se uklanja i dugmad mijenjaju boju.">
+      <created>1478465818550</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1478465818550</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Napravio sve .html stranice responzivne uključujući media query. Opcije &quot;O nama&quot;, &quot;Prijava&quot; te &quot;Usluge&quot; se prebacuju u dropdown meni a na .html stranici &quot;Kupi&quot; opcija kategorije se uklanja i dugmad mijenjaju boju.">
+      <created>1478465914041</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1478465914041</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Importovao font u .html stranice. Normalno se prezentovao kada gledam stranice na Linuxu dok je na Windowsu pravilo problem. Sa importovanim fontom radi normalno i na Windowsu.">
+      <created>1478732867665</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1478732867665</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Editovana forma unosa &quot;search&quot;.">
+      <created>1478778245120</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1478778245120</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Minorne promjene u kodu.">
+      <created>1478778904046</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1478778904046</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Centrirao elemente svih stranica. Popravio media query na mainPage.html">
+      <created>1478782059593</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1478782059593</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Riješio probleme sa media query-ijem na ostalim stranicama.">
+      <created>1478784938492</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1478784938493</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Opet popravljao media query. smh">
+      <created>1478785432571</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1478785432571</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Dodao stranicu prodaj.html i prodaj.css te popravio par stvari.">
+      <created>1478789023029</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1478789023029</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Dodao dugme za dodavanje slike u prodaj.html formi.">
+      <created>1478789524274</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1478789524274</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Za spiralu 2: Odradio validaciju, AJAX, galeriju">
+      <created>1479744437505</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1479744437505</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Dodao dropdown meni sa pretragom koji je zamjenio hidden meni za mobilne uredjaje. Popravio validaciju.">
+      <created>1480014850657</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1480014850657</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Popravio link dugmad, validaciju u formi prodaje knjige i dodao par alert poruka.">
+      <created>1480021690378</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1480021690378</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Popravio izgled menija.">
+      <created>1480022449652</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1480022449652</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Dodao ikone">
+      <created>1480022922718</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1480022922718</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Gramaticke greske..">
+      <created>1480023420830</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1480023420830</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="169025000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="45" y="24" width="1875" height="1056" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.176" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22140609" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289855" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="TestHtml Commit" />
+    <MESSAGE value="Dizajnirao početnu stranicu (mainPage.html + mainPage.css).&#10;Html fajlove ću čuvati u Project folderu dok će se Javascript i CSS fajlovi nalaziti u odgovarajućim folderima foldera .lib.&#10;&#10;Skice stranica sam radio na papiru te po njima dizajnirao mainPage.html. &#10;Odradit ću ih u nekom mockup toolu pa uploadovati." />
+    <MESSAGE value="Dizajnirao i implementirao html i css kod za stranice &quot;Prijava&quot; i &quot;Registracija&quot;." />
+    <MESSAGE value="Preuredio dizajn malo. Dodao da mi meni na pocetnoj stranici bude pristuan tokom scrolla. Problem imam kada pritisnem na &quot;O nama&quot; ili &quot;Usluge&quot; na pocetnoj stranici da mi se prikaz spusti preko naslova &quot;O nama&quot; i &quot;Usluge&quot; sto ne bi trebalo. -&gt; To mogu rijesiti preko JavaScripta sa moveY=+100px ali to cu raditi kasnije.&#10;Dodao kupi.html i kupi.css. U kupi.html ce kategorije isto biti uvijek prisutne kod scrolla!" />
+    <MESSAGE value="Napravio sve .html stranice responzivne uključujući media query. Opcije &quot;O nama&quot;, &quot;Prijava&quot; te &quot;Usluge&quot; se prebacuju u dropdown meni a na .html stranici &quot;Kupi&quot; opcija kategorije se uklanja i dugmad mijenjaju boju." />
+    <MESSAGE value="Importovao font u .html stranice. Normalno se prezentovao kada gledam stranice na Linuxu dok je na Windowsu pravilo problem. Sa importovanim fontom radi normalno i na Windowsu." />
+    <MESSAGE value="Editovana forma unosa &quot;search&quot;." />
+    <MESSAGE value="Minorne promjene u kodu." />
+    <MESSAGE value="Centrirao elemente svih stranica. Popravio media query na mainPage.html" />
+    <MESSAGE value="Riješio probleme sa media query-ijem na ostalim stranicama." />
+    <MESSAGE value="Opet popravljao media query. smh" />
+    <MESSAGE value="Dodao stranicu prodaj.html i prodaj.css te popravio par stvari." />
+    <MESSAGE value="Dodao dugme za dodavanje slike u prodaj.html formi." />
+    <MESSAGE value="Za spiralu 2: Odradio validaciju, AJAX, galeriju" />
+    <MESSAGE value="Dodao dropdown meni sa pretragom koji je zamjenio hidden meni za mobilne uredjaje. Popravio validaciju." />
+    <MESSAGE value="Popravio link dugmad, validaciju u formi prodaje knjige i dodao par alert poruka." />
+    <MESSAGE value="Popravio izgled menija." />
+    <MESSAGE value="Dodao ikone" />
+    <MESSAGE value="Gramaticke greske.." />
+    <option name="LAST_COMMIT_MESSAGE" value="Gramaticke greske.." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/lib/js/prodaj.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="31" column="71" lean-forward="false" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/js/registracija.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="20" column="1" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="20" selection-end-column="1" />
+          <folding>
+            <element signature="n#!!doc;n#loadSubPage#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registracija.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#2;n#BODY#0;n#html#0;n#!!top" expanded="false" />
+            <marker date="1480022899147" expanded="false" signature="368:1465" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prodaj.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/css/prodaj.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3258">
+          <caret line="181" column="1" lean-forward="false" selection-start-line="181" selection-start-column="1" selection-end-line="181" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/js/prodaj.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="558">
+          <caret line="31" column="71" lean-forward="false" selection-start-line="31" selection-start-column="71" selection-end-line="31" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/js/registracija.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="1" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="20" selection-end-column="1" />
+          <folding>
+            <element signature="n#!!doc;n#loadSubPage#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registracija.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="64" column="69" lean-forward="false" selection-start-line="64" selection-start-column="12" selection-end-line="64" selection-end-column="69" />
+          <folding>
+            <element signature="n#div#2;n#BODY#0;n#html#0;n#!!top" expanded="false" />
+            <marker date="1480022899147" expanded="false" signature="368:1465" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#3;n#div#1;n#BODY#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#div#1;n#BODY#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#3;n#div#1;n#BODY#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#div#1;n#BODY#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2196">
+          <caret line="122" column="87" lean-forward="false" selection-start-line="122" selection-start-column="87" selection-end-line="122" selection-end-column="87" />
+          <folding>
+            <element signature="n#div#3;n#div#1;n#BODY#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#div#1;n#BODY#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/css/mainPage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#3;n#div#1;n#BODY#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#div#1;n#BODY#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#3;n#div#1;n#BODY#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#div#1;n#BODY#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#3;n#div#1;n#BODY#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#div#1;n#BODY#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/css/mainPage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4284">
+          <caret line="238" column="0" lean-forward="false" selection-start-line="238" selection-start-column="0" selection-end-line="262" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/css/prijava.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3816">
+          <caret line="212" column="5" lean-forward="false" selection-start-line="212" selection-start-column="5" selection-end-line="212" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/css/registracija.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3816">
+          <caret line="212" column="5" lean-forward="false" selection-start-line="212" selection-start-column="5" selection-end-line="212" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/css/kupi.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4212">
+          <caret line="234" column="5" lean-forward="false" selection-start-line="234" selection-start-column="5" selection-end-line="234" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="102" lean-forward="false" selection-start-line="7" selection-start-column="102" selection-end-line="7" selection-end-column="102" />
+          <folding>
+            <element signature="n#div#3;n#div#1;n#BODY#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#div#1;n#BODY#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kupi.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="102" lean-forward="false" selection-start-line="6" selection-start-column="102" selection-end-line="6" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prijava.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="102" lean-forward="false" selection-start-line="6" selection-start-column="102" selection-end-line="6" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#3;n#div#1;n#BODY#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#div#1;n#BODY#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#3;n#div#1;n#BODY#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#div#1;n#BODY#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/css/mainPage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3852">
+          <caret line="214" column="1" lean-forward="false" selection-start-line="214" selection-start-column="1" selection-end-line="214" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#3;n#div#1;n#BODY#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#div#1;n#BODY#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/css/mainPage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3510">
+          <caret line="195" column="17" lean-forward="false" selection-start-line="195" selection-start-column="17" selection-end-line="195" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registracija.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="44" lean-forward="false" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#3;n#div#1;n#BODY#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#div#1;n#BODY#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/css/mainPage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2448">
+          <caret line="136" column="28" lean-forward="false" selection-start-line="136" selection-start-column="28" selection-end-line="136" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pop-upWindow.html" />
+    <entry file="file://$PROJECT_DIR$/lib/js/pop-upWindow.js" />
+    <entry file="file://$PROJECT_DIR$/lib/css/pop-upWindow.css" />
+    <entry file="file://$PROJECT_DIR$/jquery-1.3.2.min.js" />
+    <entry file="file://$PROJECT_DIR$/lib/css/test2.css" />
+    <entry file="file://$PROJECT_DIR$/test.html" />
+    <entry file="file://$PROJECT_DIR$/lib/css/prijava.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="26" column="15" lean-forward="false" selection-start-line="26" selection-start-column="15" selection-end-line="26" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/css/kupi.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="87" column="18" lean-forward="false" selection-start-line="87" selection-start-column="18" selection-end-line="87" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/kupi.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/js/kupi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="0" lean-forward="true" selection-start-line="22" selection-start-column="0" selection-end-line="24" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/js/prijava.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="77" lean-forward="false" selection-start-line="8" selection-start-column="77" selection-end-line="8" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/js/registracija.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="554">
+          <caret line="159" column="39" lean-forward="false" selection-start-line="159" selection-start-column="39" selection-end-line="159" selection-end-column="39" />
+          <folding>
+            <element signature="n#!!doc;n#loadSubPage#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prijava.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="58" column="6" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="58" selection-end-column="6" />
+          <folding>
+            <element signature="e#318#1454#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/registracija.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="90" column="25" lean-forward="true" selection-start-line="90" selection-start-column="25" selection-end-line="90" selection-end-column="25" />
+          <folding>
+            <element signature="n#div#2;n#BODY#0;n#html#0;n#!!top" expanded="false" />
+            <marker date="1480022899147" expanded="false" signature="368:1465" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/css/registracija.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2987">
+          <caret line="74" column="20" lean-forward="true" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/prodaj.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="71" column="236" lean-forward="false" selection-start-line="71" selection-start-column="7" selection-end-line="71" selection-end-column="236" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/css/prodaj.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="166" column="0" lean-forward="false" selection-start-line="166" selection-start-column="0" selection-end-line="168" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mainPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="80" column="14" lean-forward="false" selection-start-line="80" selection-start-column="14" selection-end-line="80" selection-end-column="14" />
+          <folding>
+            <element signature="n#div#3;n#div#1;n#BODY#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#div#1;n#BODY#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/css/mainPage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="81" column="7" lean-forward="false" selection-start-line="81" selection-start-column="7" selection-end-line="81" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/js/mainPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" column="16" lean-forward="false" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/js/prodaj.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="27" lean-forward="true" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
