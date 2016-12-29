@@ -107,7 +107,7 @@ foreach ($keys as $key => $value) {
 
 <nav>
     <ul>
-        <li><a class="brick dashboard" href="#"><span class='icon ion-home'></span>Dashboard</a></li>
+        <li><a class="brick dashboard" href="admin_dashboard.php"><span class='icon ion-home'></span>Dashboard</a></li>
         <li><a class="brick pages" href="admin_korisnici.php"><span class='icon ion-document'></span>Registrovani korisnici</a></li>
         <li><a class="brick navigation" href="admin_udzbenici.php"><span class='icon ion-android-share-alt'></span>Udžbenici u prodaji</a></li>
         <li><a class="brick settings" href="admin_izvjestaji.php"><span class='icon ion-gear-a'></span>Izvještaji</a></li>
@@ -128,13 +128,13 @@ foreach ($keys as $key => $value) {
         </div>
 
         <div class="brick close">
-            <span class="text">Test</span>
+            <span class="text"></span>
             <span class="icon ion-close"></span>
         </div>
 
 
         <div class="brick save">
-            <span class="text">Test</span>
+            <span class="text"></span>
             <span class="icon ion-checkmark"></span>
         </div>
 

@@ -79,7 +79,7 @@
             $_SESSION['username'] = 'admin';
 
             $_SESSION['user'] = 'Administrator';
-            header('Location: admin_korisnici.php');
+            header('Location: admin_dashboard.php');
         }
         else{
             $msg = 'Neispravan unos!';

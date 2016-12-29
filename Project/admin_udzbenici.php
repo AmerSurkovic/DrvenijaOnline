@@ -26,15 +26,15 @@ if($_SESSION['username'] != 'admin'){
 $red_izmjena=-1;
 if(isset($_REQUEST['Naziv']) && !empty($_REQUEST['Naziv']) && isset($_REQUEST['Skola']) && !empty($_REQUEST['Skola']) && isset($_REQUEST['Predmet']) && !empty($_REQUEST['Predmet']) && isset($_REQUEST['GodinaIzdavanja']) && !empty($_REQUEST['GodinaIzdavanja']) && isset($_REQUEST['Stanje']) && !empty($_REQUEST['Stanje']) && isset($_REQUEST['Cijena']) && !empty($_REQUEST['Cijena']) && isset($_REQUEST['MogucnostRazmjene']) && !empty($_REQUEST['MogucnostRazmjene'])){
     if($_REQUEST['Opcija']=="Dodaj"){
-        $dodaj= array();
+     /*   $dodaj= array();
         $dodaj[0]=$_REQUEST['Naziv'];
         $dodaj[1]=$_REQUEST['Skola'];
         $dodaj[2]=$_REQUEST['Predmet'];
         $dodaj[3]=$_REQUEST['GodinaIzdavanja'];
         $dodaj[4]=$_REQUEST['Stanje'];
         $dodaj[5]=$_REQUEST['Cijena'];
-        $dodaj[6]=$_REQUEST['Mogucnost razmjene'];
-
+        $dodaj[6]=$_REQUEST['MogucnostRazmjene'];
+*/
         $xml=simplexml_load_file("knjige.xml") or $postoji=false;
 
         if($postoji==false){
@@ -44,13 +44,13 @@ if(isset($_REQUEST['Naziv']) && !empty($_REQUEST['Naziv']) && isset($_REQUEST['S
         }
 
         $person = $xml->addChild('knjiga');
-        $person->addChild('naziv', $dodaj[0]);
-        $person->addChild('skola', $dodaj[1]);
-        $person->addChild('predmet', $dodaj[2]);
-        $person->addChild('godinaIzdavanja', $dodaj[3]);
-        $person->addChild('stanje', $dodaj[4]);
-        $person->addChild('cijena', $dodaj[5]);
-        $person->addChild('mogucnostRazmjene', $dodaj[6]);
+        $person->addChild('naziv', $_REQUEST['Naziv']);
+        $person->addChild('skola', $_REQUEST['Skola']);
+        $person->addChild('predmet', $_REQUEST['Predmet']);
+        $person->addChild('GodinaIzdavanja', $dodaj[3]=$_REQUEST['GodinaIzdavanja']);
+        $person->addChild('stanje', $_REQUEST['Stanje']);
+        $person->addChild('cijena', $_REQUEST['Cijena']);
+        $person->addChild('MogucnostRazmjene', $_REQUEST['MogucnostRazmjene']);
         $xml->asXML("knjige.xml");
 
         header('Location: admin_udzbenici.php');
@@ -87,10 +87,10 @@ foreach ($keys as $key => $value) {
             $xml->knjiga[$koji_red-1]->naziv = $_REQUEST['Naziv'];
             $xml->knjiga[$koji_red-1]->skola = $_REQUEST['Skola'];
             $xml->knjiga[$koji_red-1]->predmet = $_REQUEST['Predmet'];
-            $xml->knjiga[$koji_red-1]->godinaIzdavanja = $_REQUEST['Godina izdavanja'];
+            $xml->knjiga[$koji_red-1]->GodinaIzdavanja = $_REQUEST['GodinaIzdavanja'];
             $xml->knjiga[$koji_red-1]->stanje = $_REQUEST['Stanje'];
             $xml->knjiga[$koji_red-1]->cijena = $_REQUEST['Cijena'];
-            $xml->knjiga[$koji_red-1]->mogucnostRazmjene = $_REQUEST['Mogucnost razmjene'];
+            $xml->knjiga[$koji_red-1]->MogucnostRazmjene = $_REQUEST['MogucnostRazmjene'];
             $xml->asXML("knjige.xml");
 
             header('Location: admin_udzbenici.php');
@@ -107,7 +107,7 @@ foreach ($keys as $key => $value) {
 
 <nav>
     <ul>
-        <li><a class="brick dashboard" href="#"><span class='icon ion-home'></span>Dashboard</a></li>
+        <li><a class="brick dashboard" href="admin_dashboard.php"><span class='icon ion-home'></span>Dashboard</a></li>
         <li><a class="brick pages" href="admin_korisnici.php"><span class='icon ion-document'></span>Registrovani korisnici</a></li>
         <li><a class="brick navigation" href="admin_udzbenici.php"><span class='icon ion-android-share-alt'></span>Udžbenici u prodaji</a></li>
         <li><a class="brick settings" href="admin_izvjestaji.php"><span class='icon ion-gear-a'></span>Izvještaji</a></li>
@@ -128,13 +128,13 @@ foreach ($keys as $key => $value) {
         </div>
 
         <div class="brick close">
-            <span class="text">Test</span>
+            <span class="text"></span>
             <span class="icon ion-close"></span>
         </div>
 
 
         <div class="brick save">
-            <span class="text">Test</span>
+            <span class="text"></span>
             <span class="icon ion-checkmark"></span>
         </div>
 
@@ -221,37 +221,7 @@ foreach ($keys as $key => $value) {
             </p>
         </hgroup>
     </div>
-    <!--
-        <div class="brick closed">
-            <hgroup>
-                <h2>Test</h2>
-                <a href="#" class="icon ion-close js-close close"></a>
-                <form>
-                    <textarea></textarea>
-                </form>
-            </hgroup>
-        </div>
 
-        <div class="brick closed">
-            <hgroup>
-                <h2>Test</h2>
-                <a href="#" class="icon ion-close js-close close"></a>
-                <form>
-                    <textarea></textarea>
-                </form>
-            </hgroup>
-        </div>
-
-        <div class="brick closed">
-            <hgroup>
-                <h2>Test</h2>
-                <a href="#" class="icon ion-close js-close close"></a>
-                <form>
-                    <textarea></textarea>
-                </form>
-            </hgroup>
-        </div>
-    -->
 
 </div>
 

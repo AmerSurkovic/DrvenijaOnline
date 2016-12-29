@@ -41,7 +41,7 @@ if($_SESSION['username'] != 'admin'){
         </div>
 
         <div class="brick title">
-            <h2>Trenutno ste na pregledu izvještaja dostupnih za download.</h2>
+            <h2>Dobro došli</h2>
             <a href="mainPage.html" target="_blank">Pregled "Drvenija.ba"</a>
         </div>
 
@@ -61,27 +61,36 @@ if($_SESSION['username'] != 'admin'){
 
     <div class="brick closed">
         <hgroup>
-            <h2>CSV Izvještaji</h2>
-            <form action="downloadCSVkorisnici.php" method="get">
-                Download CSV izvještaj svih korisnika <input class='dugme' type='submit' name='Opcija' value='Download'>
+            <script>
+                function showResult(str) {
+                    if (str.length==0) {
+                        document.getElementById("livesearch").innerHTML="";
+                        document.getElementById("livesearch").style.border="0px";
+                        return;
+                    }
+                    if (window.XMLHttpRequest) {
+                        // code for IE7+, Firefox, Chrome, Opera, Safari
+                        xmlhttp=new XMLHttpRequest();
+                    } else {  // code for IE6, IE5
+                        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+                    }
+                    xmlhttp.onreadystatechange=function() {
+                        if (this.readyState==4 && this.status==200) {
+                            document.getElementById("livesearch").innerHTML=this.responseText;
+                            document.getElementById("livesearch").style.border="1px solid #A5ACB2";
+                        }
+                    }
+                    xmlhttp.open("GET","livesearch.php?q="+str,true);
+                    xmlhttp.send();
+                }
+            </script>
+            <h2>Pretraga korisnika</h2>
+            <form>
+                <input type="text" size="30" onkeyup="showResult(this.value)">
+                <div id="livesearch"></div>
             </form>
-            <br>
-            <form action="downloadCSVudzbenici.php" method="get">
-                Download CSV izvještaj svih aktivnih artikala <input class='dugme' type='submit' name='Opcija' value='Download'>
-            </form>
-            <br>
-            <h2>PDF Izvještaj</h2>
-            <form action="creatingPDF_korisnici.php" method="get">
-                Pregled/download PDF izvještaja svih korisnika <input class='dugme' type='submit' name='Opcija' value='Otvori'>
-            </form>
-            <br>
-            <form action="creatingPDF_udzbenici.php" method="get">
-                Pregled/download PDF svih aktivnih artikala <input class='dugme' type='submit' name='Opcija' value='Otvori'>
-            </form>
-            <br>
         </hgroup>
     </div>
-
 
 </div>
 
