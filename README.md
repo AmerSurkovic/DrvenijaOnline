@@ -4,22 +4,22 @@ www.drvenija.ba
 
 **I  - Šta je urađeno?**
 
-  * Validacija svih formi unosa osim prijave, budući da mi nema smisla
-    validirati korisnika koji nije u sistemu. (Forme koje jesam odradio su registracija korisnika i prodaja knjige)
-  * Galerija slika sa opcijom da se na klik slika raširi preko cijelog ekrana, a na escape da se vrati pogled nazad na galeriju. Data galerija je implementirana na podstranici "Kupi".
-  * Dropdown meni na glavnoj stranici sa svim podstranicama i opcijom pretraživanja.
-  * Koristio AJAX da loadam sve podstranice na mainPage.html
-  
-**Dodatni komentari:**
-  * Sve stranice su urađene po pravilima responzivnog dizajna i imaju grid view.
-  * Meni web stranice je konzistentan (bez glitcheva) i prisutan na svim podstranicama te je prilagođen mobilnim uređajima.
-  * HTML i CSS su formatirani i validirani.
+  * Serializacija svih podataka u XML fajlove. Serijalizuju se podaci o korisnicima i udzbenicima.
+    Admin moze raditi pregled, brisanje i editovanje svih unesenih podataka preko web stranice.
+  * Korisnici su registrovani i zapisuju se u XML fajl te odatle citaju pri loginu. Admin ima svoj dashboard za sve trazene    funkcije.
+  * Sesija je koristena za kontrolu pristupa.
+  * Admin moze downloadovati 2 CSV fajla, o 2 tipa serijalizovanih podataka.
+  * Admin moze downloadovati 2 PDF izvjestaja, o 2 tipa serijalizovanih podataka.
+  * Admin username: admin Admin password: adminadmin
+  * Na dashboardu admin moze pretrazivati dodane korisnike.
+  * Realizovana je PHP validacija.
+  * Korisnik se moze registrovati (obavljena je serijalizacija).
 
 **II  - Šta nije urađeno?**
 /
 
 **III - Bug-ovi koje ste primijetili ali niste stigli ispraviti, a znate rješenje (opis rješenja)**
-  * Nisam odradio da je sa svake podstranice dostupno "O nama".
+/
 
 **IV  - Bug-ovi koje ste primijetili ali ne znate rješenje**
 /
@@ -39,11 +39,21 @@ Folder Skice:
   * registracija_mobilna (Skica stranice registracije prilagođena mobilnim uređajima)
 
 Folder Project:
-  * mainPage.html (Posjeduje informacije "O nama" te dostupne "Usluge" zajedno sa "welcome message")
-  * prijava.html (Prijava korisnika)
-  * registracija.html (Registracija korisnika)
-  * kupi.html (Kupovina ili razmjena knjiga)
-  * prodaj.html (Prodaja knjige)
+  * mainPage.php (Posjeduje informacije "O nama" te dostupne "Usluge" zajedno sa "welcome message")
+  * prijava.php (Prijava korisnika)
+  * registracija.php (Registracija korisnika)
+  * kupi.php (Kupovina ili razmjena knjiga)
+  * prodaj.php (Prodaja knjige)
+  * admin_dashboard.php (Search usera)
+  * admin_izvjestaji.php (Download csva i pregled pdfova)
+  * admin_korisnici.php (Dodavanje, edit i brisanje korisnika)
+  * admin_udzbenici.php (Dodavanje, edit i brisanje udzbenika)
+  * creatingPDF_korisnici.php (Generise pdf izvjestaj za korisnike)
+  * creatingPDF_udzbenici.php (Generise pdf izvjestaj o udzbenicima)
+  * downloadCSVkorisnici.php (Generise i downloaduje CSV o korisnicima)
+  * downloadCSVudzbenici.php (Generise i downloaduje CSV o udzbenicima)
+  * logout.php (Radi logout sesije)
+  * livesearch.php (Pretrazuje usere u xmlu)
  
 Folder Project/lib/css:
   * mainPage.css
