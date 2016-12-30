@@ -12,5 +12,5 @@ unset($_SESSION["password"]);
 
 $_SESSION['user'] = 'Prijava';
 echo 'You have cleaned session';
-header('Location: mainPage.html');
+header('Location: mainPage.php');
 exit();

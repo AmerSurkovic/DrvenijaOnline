@@ -1,48 +1,67 @@
+<?php
+$_POST = array(); //workaround for broken PHPstorm
+parse_str(file_get_contents('php://input'), $_POST);
+
+ob_start();
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Kupi ba</title>
+
+    <link rel="stylesheet" href="lib/css/dropdown.css">
     <link rel="stylesheet" href="lib/css/kupi.css">
+
     <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 
     <script src="lib/js/kupi.js"></script>
-
+    <script type="text/javascript" src="lib/js/dropdown.js"></script>
 </head>
 
 <BODY>
 
-<!--Meni
+<!--Meni-->
 <div id="meni" class="row">
     <div id="moto" class="column one">
-        <div class="dropdown">
-            <button class="dropbtn">Drvenija.ba</button>
-        </div>
 
-        <div id="alternativeMenu" class="dropdown">
-            <button class="dropbtn">Meni</button>
-            <div class="dropdown-content">
-                <a href="mainPage.html#aboutUsCaption">O nama</a>
-                <a href="mainPage.html#uslugeCaption">Usluge</a>
+        <div class="dropdownJS">
+            <button onclick="myFunction()" class="dropbtnJS">☰ Drvenija.ba</button>
+            <div id="myDropdownJS" class="dropdownJS-content">
+                <input type="text" placeholder="Pretraži.." id="myInput" onkeyup="filterFunction()">
+                <a href="mainPage.php">Početna</a>
                 <a href="prijava.php">Prijava</a>
+                <a href="registracija.php">Registracija</a>
+                <a href="kupi.php">Kupi</a>
+                <a href="prodaj.php">Prodaj</a>
             </div>
-        </div> <br>
+        </div>
+        <br>
         Skromni sponzor roditelja i učenika.
     </div>
-    <div class="column two"><h2> <a id="aboutUsLink" href="mainPage.html#aboutUsCaption">O nama</a> </h2></div>
-    <div class="column two">
+    <div class="column two"><h2> <a id="aboutUsLink" href="#aboutUsCaption">O nama</a> </h2></div> <!--O nama-->
+    <div class="column two"> <!--Usluge-->
         <div class="dropdown">
             <button id="realMenu" class="dropbtn">Usluge</button>
             <div class="dropdown-content">
                 <a href="kupi.html">Kupi</a>
-                <a href="prodaj.html">Prodaj/zamjeni</a>
+                <a href="prodaj.php">Prodaj/zamjeni</a>
             </div>
         </div>
     </div>
-    <div class="column two"><h2> <a id="prijavaLink" href="prijava.php">Prijava</a></h2></div>
+    <div class="column two"><h2> <a id="prijavaLink" href="prijava.php">👤 <?php
+                if($_SESSION['username']!=''){
+                    echo $_SESSION['username'];
+                }
+                else{
+                    echo 'Prijava';
+                }
+                ?></a></h2></div> <!--Prijava-->
 
 </div>
--->
+
 
 <!--Listing-->
 <div class="row">

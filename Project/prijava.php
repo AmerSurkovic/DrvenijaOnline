@@ -31,11 +31,11 @@
             <button onclick="myFunction()" class="dropbtnJS">☰ Drvenija.ba</button>
             <div id="myDropdownJS" class="dropdownJS-content">
                 <input type="text" placeholder="Pretraži.." id="myInput" onkeyup="filterFunction()">
-                <a href="mainPage.html">Početna</a>
+                <a href="mainPage.php">Početna</a>
                 <a href="prijava.php">Prijava</a>
                 <a href="registracija.php">Registracija</a>
-                <a href="kupi.html">Kupi</a>
-                <a href="prodaj.html">Prodaj</a>
+                <a href="kupi.php">Kupi</a>
+                <a href="prodaj.php">Prodaj</a>
             </div>
         </div>
         <br>
@@ -46,12 +46,19 @@
         <div class="dropdown">
             <button id="realMenu" class="dropbtn">Usluge</button>
             <div class="dropdown-content">
-                <a href="kupi.html">Kupi</a>
-                <a href="prodaj.html">Prodaj/zamjeni</a>
+                <a href="kupi.php">Kupi</a>
+                <a href="prodaj.php">Prodaj/zamjeni</a>
             </div>
         </div>
     </div>
-    <div class="column two"><h2> <a id="prijavaLink" name='testt' href="prijava.php">👤 <?php echo $_SESSION['user']; ?></a></h2></div> <!--Prijava-->
+    <div class="column two"><h2> <a id="prijavaLink" name='testt' href="prijava.php">👤 <?php
+                if($_SESSION['username']!=''){
+                    echo $_SESSION['username'];
+                }
+                else{
+                    echo 'Prijava';
+                }
+                ?></a></h2></div></a></h2></div> <!--Prijava-->
 
 </div>
 
@@ -73,16 +80,45 @@
     <?php
     $msg = '';
     if(isset($_POST['login']) && !empty($_POST['userName']) && !empty($_POST['password'])){
-        if($_POST['userName'] == 'admin' && $_POST['password'] == 'admin'){
+
+        $xml=simplexml_load_file("korisnici.xml");
+        global $bool;
+        $bool = false;
+
+        $a = '';
+        foreach($xml as $korisnik){
+            if($korisnik->userName == $_POST['userName'] && $korisnik->password == $_POST['password']){
+                $a = $korisnik->userName;
+                $bool = true;
+
+                break;
+            }
+        }
+
+        if($bool==true){
+            $_SESSION['valid'] = true;
+            $_SESSION['timeout'] = time();
+            $_SESSION['username'] = strval($a);
+
+            #$_SESSION['user'] = 'Administrator';
+            header("Refresh:0");
+        }
+        #echo $_SESSION['username'];
+        #print_r(strval($a));
+     /*   if($_POST['userName'] == 'admin' && $_POST['password'] == 'admin'){
             $_SESSION['valid'] = true;
             $_SESSION['timeout'] = time();
             $_SESSION['username'] = 'admin';
 
             $_SESSION['user'] = 'Administrator';
             header('Location: admin_dashboard.php');
-        }
-        else{
+        }*/
+        if($bool==false){
             $msg = 'Neispravan unos!';
+        }
+
+        if($_SESSION['username'] == 'admin'){
+           header('Location: admin_dashboard.php');
         }
     }
     ?>
@@ -98,7 +134,7 @@
     </div>
     <div class="row one">
         <div class="column four right"><h3>Lozinka:</h3></div>
-        <div class="column four left"><h3><input type="text" name="password"></h3></div>
+        <div class="column four left"><h3><input type="password" name="password"></h3></div>
     </div>
     <div class="row one">
         <div id="potvrdaRow" class="column three"><h3> <input id="potvrdaButton" name="login" type="submit" value="Prijavi se"> </h3></div>

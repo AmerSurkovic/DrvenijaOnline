@@ -1,3 +1,11 @@
+<?php
+$_POST = array(); //workaround for broken PHPstorm
+parse_str(file_get_contents('php://input'), $_POST);
+
+ob_start();
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,11 +32,11 @@
             <button onclick="myFunction()" class="dropbtnJS">☰ Drvenija.ba</button>
             <div id="myDropdownJS" class="dropdownJS-content">
                 <input type="text" placeholder="Pretraži.." id="myInput" onkeyup="filterFunction()">
-                <a href="mainPage.html">Početna</a>
+                <a href="mainPage.php">Početna</a>
                 <a href="prijava.php">Prijava</a>
                 <a href="registracija.php">Registracija</a>
-                <a href="kupi.html">Kupi</a>
-                <a href="prodaj.html">Prodaj</a>
+                <a href="kupi.php">Kupi</a>
+                <a href="prodaj.php">Prodaj</a>
             </div>
         </div>
         <br>
@@ -39,12 +47,19 @@
         <div class="dropdown">
             <button id="realMenu" class="dropbtn">Usluge</button>
             <div class="dropdown-content">
-                <a href="kupi.html">Kupi</a>
-                <a href="prodaj.html">Prodaj/zamjeni</a>
+                <a href="kupi.php">Kupi</a>
+                <a href="prodaj.php">Prodaj/zamjeni</a>
             </div>
         </div>
     </div>
-    <div class="column two"><h2> <a id="prijavaLink" href="prijava.php">👤 Prijava</a></h2></div> <!--Prijava-->
+    <div class="column two"><h2> <a id="prijavaLink" href="prijava.php">👤 <?php
+                if($_SESSION['username']!=''){
+                    echo $_SESSION['username'];
+                }
+                else{
+                    echo 'Prijava';
+                }
+                ?></a></h2></div> <!--Prijava-->
 
 </div>
 

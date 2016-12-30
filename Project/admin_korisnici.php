@@ -124,7 +124,7 @@ foreach ($keys as $key => $value) {
 
         <div class="brick title">
             <h2>Trenutno ste na pregledu svih korisnika registrovanih na stranici.</h2>
-            <a href="mainPage.html" target="_blank">Pregled "Drvenija.ba"</a>
+            <a href="mainPage.php" target="_blank">Pregled "Drvenija.ba"</a>
         </div>
 
         <div class="brick close">

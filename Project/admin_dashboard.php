@@ -42,7 +42,7 @@ if($_SESSION['username'] != 'admin'){
 
         <div class="brick title">
             <h2>Dobro došli</h2>
-            <a href="mainPage.html" target="_blank">Pregled "Drvenija.ba"</a>
+            <a href="mainPage.php" target="_blank">Pregled "Drvenija.ba"</a>
         </div>
 
         <div class="brick close">

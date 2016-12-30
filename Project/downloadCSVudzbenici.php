@@ -1,12 +1,12 @@
 <?php
 
-function array_to_csv_download($array, $filename = "export.csv", $delimiter=";") {
+function array_to_csv_download($array, $filename = "export.csv", $delimiter=",") {
     // open raw memory as file so no temp files needed, you might run out of memory though
     $f = fopen('php://memory', 'w');
 
     $headings = array('Naziv', 'Škola', 'Predmet', 'Godina izdavanja', 'Stanje', 'Cijena', 'Mogućnost razmjene');
 
-    fputcsv($f, $headings);
+    fputcsv($f, $headings, $delimiter);
 
     // loop over the input array
     foreach ($array as $line) {
