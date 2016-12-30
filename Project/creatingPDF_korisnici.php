@@ -9,7 +9,7 @@ class pdf extends fpdf{
         // Header
         foreach($header as $col)
             $this->Cell(40,7,$col,1,0, 'C');
-        $this->Ln();
+       // $this->Ln();
         // Data
         foreach($data as $row)
         {
