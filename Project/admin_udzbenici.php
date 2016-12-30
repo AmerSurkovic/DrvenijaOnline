@@ -7,6 +7,8 @@ if($_SESSION['username'] != 'admin'){
     header('Location: prijava.php');
 }
 
+$errorTest = '';
+
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +26,7 @@ if($_SESSION['username'] != 'admin'){
 
 <?php
 $red_izmjena=-1;
-if(isset($_REQUEST['Naziv']) && !empty($_REQUEST['Naziv']) && isset($_REQUEST['Skola']) && !empty($_REQUEST['Skola']) && isset($_REQUEST['Predmet']) && !empty($_REQUEST['Predmet']) && isset($_REQUEST['GodinaIzdavanja']) && !empty($_REQUEST['GodinaIzdavanja']) && isset($_REQUEST['Stanje']) && !empty($_REQUEST['Stanje']) && isset($_REQUEST['Cijena']) && !empty($_REQUEST['Cijena']) && isset($_REQUEST['MogucnostRazmjene']) && !empty($_REQUEST['MogucnostRazmjene'])){
+if(isset($_REQUEST['Naziv']) && !empty($_REQUEST['Naziv']) && isset($_REQUEST['Skola']) && !empty($_REQUEST['Skola']) && isset($_REQUEST['Predmet']) && !empty($_REQUEST['Predmet']) && isset($_REQUEST['GodinaIzdavanja']) && !empty($_REQUEST['GodinaIzdavanja']) && isset($_REQUEST['Stanje']) && isset($_REQUEST['Cijena']) && !empty($_REQUEST['Cijena']) && isset($_REQUEST['MogucnostRazmjene'])){
     if($_REQUEST['Opcija']=="Dodaj"){
      /*   $dodaj= array();
         $dodaj[0]=$_REQUEST['Naziv'];
@@ -35,25 +37,43 @@ if(isset($_REQUEST['Naziv']) && !empty($_REQUEST['Naziv']) && isset($_REQUEST['S
         $dodaj[5]=$_REQUEST['Cijena'];
         $dodaj[6]=$_REQUEST['MogucnostRazmjene'];
 */
-        $xml=simplexml_load_file("knjige.xml") or $postoji=false;
-
-        if($postoji==false){
-            $xml = new SimpleXMLElement('<?xml version="1.0" encoding="utf-8"?><knjige></knjige>');
-            $xml->addAttribute('version', '1.0');
-            $xml->addChild('datetime', date('Y-m-d H:i:s'));
+        if(strlen($_REQUEST['Naziv']) < 3) {
+            $errorTest = "Naziv mora imati barem 3 slova." . "<br>";
         }
+        else if(strlen($_REQUEST['Skola']) < 3) {
+            $errorTest .= "Skola mora imati barem 3 slova." . "<br>";
+        }
+        else if(strlen($_REQUEST['Predmet']) < 3) {
+            $errorTest .= "Predmet mora imati barem 3 slova." . "<br>";
+        }
+        else if(strval($_REQUEST['GodinaIzdavanja']) < 1900 || strval($_REQUEST['GodinaIzdavanja']) > 2017) {
+            $errorTest .= "Godina izdavanja ne moze biti ispod 1990 ili iznad 2017." . "<br>";
+        }
+        else if(!preg_match('/^[0-9 ]$/', strval($_REQUEST['Cijena']))) {
+            $errorTest .= "Cijena mora biti broj." . "<br>";
+        }
+        else{
+            header("Refresh:0");
+            $xml=simplexml_load_file("knjige.xml") or $postoji=false;
 
-        $person = $xml->addChild('knjiga');
-        $person->addChild('naziv', $_REQUEST['Naziv']);
-        $person->addChild('skola', $_REQUEST['Skola']);
-        $person->addChild('predmet', $_REQUEST['Predmet']);
-        $person->addChild('GodinaIzdavanja', $dodaj[3]=$_REQUEST['GodinaIzdavanja']);
-        $person->addChild('stanje', $_REQUEST['Stanje']);
-        $person->addChild('cijena', $_REQUEST['Cijena']);
-        $person->addChild('MogucnostRazmjene', $_REQUEST['MogucnostRazmjene']);
-        $xml->asXML("knjige.xml");
+            if($postoji==false){
+                $xml = new SimpleXMLElement('<?xml version="1.0" encoding="utf-8"?><knjige></knjige>');
+                $xml->addAttribute('version', '1.0');
+                $xml->addChild('datetime', date('Y-m-d H:i:s'));
+            }
 
-        header('Location: admin_udzbenici.php');
+            $person = $xml->addChild('knjiga');
+            $person->addChild('naziv', $_REQUEST['Naziv']);
+            $person->addChild('skola', $_REQUEST['Skola']);
+            $person->addChild('predmet', $_REQUEST['Predmet']);
+            $person->addChild('GodinaIzdavanja', $dodaj[3]=$_REQUEST['GodinaIzdavanja']);
+            $person->addChild('stanje', $_REQUEST['Stanje']);
+            $person->addChild('cijena', $_REQUEST['Cijena']);
+            $person->addChild('MogucnostRazmjene', $_REQUEST['MogucnostRazmjene']);
+            $xml->asXML("knjige.xml");
+
+            header('Location: admin_udzbenici.php');
+        }
     }
 }
 
@@ -74,26 +94,43 @@ foreach ($keys as $key => $value) {
 
         }
         else if($_REQUEST[$keys[$key]]=="Sacuvaj"){
-            $red = 0;
-
-            $xml=simplexml_load_file("knjige.xml") or $postoji=false;
-
-            if($postoji==false){
-                $xml = new SimpleXMLElement('<?xml version="1.0" encoding="utf-8"?><knjige></knjige>');
-                $xml->addAttribute('version', '1.0');
-                $xml->addChild('datetime', date('Y-m-d H:i:s'));
+            if(strlen($_REQUEST['Naziv']) < 3) {
+                $errorTest = "Naziv mora imati barem 3 slova." . "<br>";
             }
+            else if(strlen($_REQUEST['Skola']) < 3) {
+                $errorTest .= "Skola mora imati barem 3 slova." . "<br>";
+            }
+            else if(strlen($_REQUEST['Predmet']) < 3) {
+                $errorTest .= "Predmet mora imati barem 3 slova." . "<br>";
+            }
+            else if(strval($_REQUEST['GodinaIzdavanja']) < 1900 || strval($_REQUEST['GodinaIzdavanja']) > 2017) {
+                $errorTest .= "Godina izdavanja ne moze biti ispod 1990 ili iznad 2017." . "<br>";
+            }
+            else if(!preg_match('/^[0-9 ]$/', strval($_REQUEST['Cijena']))) {
+                $errorTest .= "Cijena mora biti broj." . "<br>";
+            }
+            else{
+                $red = 0;
 
-            $xml->knjiga[$koji_red-1]->naziv = $_REQUEST['Naziv'];
-            $xml->knjiga[$koji_red-1]->skola = $_REQUEST['Skola'];
-            $xml->knjiga[$koji_red-1]->predmet = $_REQUEST['Predmet'];
-            $xml->knjiga[$koji_red-1]->GodinaIzdavanja = $_REQUEST['GodinaIzdavanja'];
-            $xml->knjiga[$koji_red-1]->stanje = $_REQUEST['Stanje'];
-            $xml->knjiga[$koji_red-1]->cijena = $_REQUEST['Cijena'];
-            $xml->knjiga[$koji_red-1]->MogucnostRazmjene = $_REQUEST['MogucnostRazmjene'];
-            $xml->asXML("knjige.xml");
+                $xml=simplexml_load_file("knjige.xml") or $postoji=false;
 
-            header('Location: admin_udzbenici.php');
+                if($postoji==false){
+                    $xml = new SimpleXMLElement('<?xml version="1.0" encoding="utf-8"?><knjige></knjige>');
+                    $xml->addAttribute('version', '1.0');
+                    $xml->addChild('datetime', date('Y-m-d H:i:s'));
+                }
+
+                $xml->knjiga[$koji_red-1]->naziv = $_REQUEST['Naziv'];
+                $xml->knjiga[$koji_red-1]->skola = $_REQUEST['Skola'];
+                $xml->knjiga[$koji_red-1]->predmet = $_REQUEST['Predmet'];
+                $xml->knjiga[$koji_red-1]->GodinaIzdavanja = $_REQUEST['GodinaIzdavanja'];
+                $xml->knjiga[$koji_red-1]->stanje = $_REQUEST['Stanje'];
+                $xml->knjiga[$koji_red-1]->cijena = $_REQUEST['Cijena'];
+                $xml->knjiga[$koji_red-1]->MogucnostRazmjene = $_REQUEST['MogucnostRazmjene'];
+                $xml->asXML("knjige.xml");
+
+                header('Location: admin_udzbenici.php');
+            }
         }
         else{
             $red_izmjena=$koji_red;
@@ -218,6 +255,9 @@ foreach ($keys as $key => $value) {
                     ?>
                 </table>
             </form>
+            <p><?php
+                echo $errorTest;
+                ?></p>
             </p>
         </hgroup>
     </div>

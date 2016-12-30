@@ -7,6 +7,8 @@ if($_SESSION['username'] != 'admin'){
     header('Location: prijava.php');
 }
 
+$errorTest = '';
+
 ?>
 
 <!DOCTYPE html>
@@ -26,40 +28,66 @@ if($_SESSION['username'] != 'admin'){
 $red_izmjena=-1;
 if(isset($_REQUEST['Ime']) && !empty($_REQUEST['Ime']) && isset($_REQUEST['Prezime']) && !empty($_REQUEST['Prezime']) && isset($_REQUEST['Telefon']) && !empty($_REQUEST['Telefon']) && isset($_REQUEST['Lokacija']) && !empty($_REQUEST['Lokacija']) && isset($_REQUEST['userName']) && !empty($_REQUEST['userName']) && isset($_REQUEST['eMail']) && !empty($_REQUEST['eMail']) && isset($_REQUEST['password']) && !empty($_REQUEST['password'])){
     if($_REQUEST['Opcija']=="Dodaj"){
-        $dodaj= array();
-        $dodaj[0]=$_REQUEST['Ime'];
-        $dodaj[1]=$_REQUEST['Prezime'];
-        $dodaj[2]=$_REQUEST['Telefon'];
-        $dodaj[3]=$_REQUEST['Lokacija'];
-        $dodaj[4]=$_REQUEST['userName'];
-        $dodaj[5]=$_REQUEST['eMail'];
-        $dodaj[6]=$_REQUEST['password'];
 
-        $xml=simplexml_load_file("korisnici.xml") or $postoji=false;
-
-        if($postoji==false){
-            $xml = new SimpleXMLElement('<?xml version="1.0" encoding="utf-8"?><korisnici></korisnici>');
-            $xml->addAttribute('version', '1.0');
-            $xml->addChild('datetime', date('Y-m-d H:i:s'));
+        if(strlen($_REQUEST['Ime']) < 3) {
+            $errorTest = "Ime mora imati barem 3 slova." . "<br>";
         }
+        else if(strlen($_REQUEST['Prezime']) < 3) {
+            $errorTest .= "Prezime mora imati barem 3 slova." . "<br>";
+        }
+        else if(!preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{3,4}$/', strval($_REQUEST['Telefon']))) {
+            $errorTest .= "Broj telefona mora imati oblik 000-000-000(0)" . "<br>";
+        }
+        else if(!preg_match('/^[A-Za-z0-9, ]{3,20}$/', strval($_REQUEST['Lokacija']))) {
+            $errorTest .= "Lokacija mora imati barem 5 slova." . "<br>";
+        }
+        else if(!preg_match('/^[A-Za-z0-9_]{1,20}$/', strval($_REQUEST['userName']))) {
+            $errorTest .= "Username mora imati barem 3 slova bez specijalnih karaktera." . "<br>";
+        }
+        else if(!preg_match('/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i', strval($_REQUEST['eMail']))) {
+            $errorTest .= "Neispravan mail" . "<br>";
+        }
+        else if(!preg_match('/^[A-Za-z0-9!@#$%^&*()_]{6,20}$/', strval($_REQUEST['password']))) {
+            $errorTest .= "Neispravan password" . "<br>";
+        }
+        else{
+            header("Refresh:0");
+            $dodaj= array();
+            $dodaj[0]=$_REQUEST['Ime'];
+            $dodaj[1]=$_REQUEST['Prezime'];
+            $dodaj[2]=$_REQUEST['Telefon'];
+            $dodaj[3]=$_REQUEST['Lokacija'];
+            $dodaj[4]=$_REQUEST['userName'];
+            $dodaj[5]=$_REQUEST['eMail'];
+            $dodaj[6]=$_REQUEST['password'];
 
-        $person = $xml->addChild('korisnik');
-        $person->addChild('Ime', $dodaj[0]);
-        $person->addChild('Prezime', $dodaj[1]);
-        $person->addChild('Telefon', $dodaj[2]);
-        $person->addChild('Lokacija', $dodaj[3]);
-        $person->addChild('userName', $dodaj[4]);
-        $person->addChild('eMail', $dodaj[5]);
-        $person->addChild('password', $dodaj[6]);
-        $xml->asXML("korisnici.xml");
+            $xml=simplexml_load_file("korisnici.xml") or $postoji=false;
 
-        header('Location: admin_korisnici.php');
+            if($postoji==false){
+                $xml = new SimpleXMLElement('<?xml version="1.0" encoding="utf-8"?><korisnici></korisnici>');
+                $xml->addAttribute('version', '1.0');
+                $xml->addChild('datetime', date('Y-m-d H:i:s'));
+            }
+
+            $person = $xml->addChild('korisnik');
+            $person->addChild('Ime', $dodaj[0]);
+            $person->addChild('Prezime', $dodaj[1]);
+            $person->addChild('Telefon', $dodaj[2]);
+            $person->addChild('Lokacija', $dodaj[3]);
+            $person->addChild('userName', $dodaj[4]);
+            $person->addChild('eMail', $dodaj[5]);
+            $person->addChild('password', $dodaj[6]);
+            $xml->asXML("korisnici.xml");
+
+            header('Location: admin_korisnici.php');
+        }
     }
 }
 
 $keys=array_keys($_GET);
 foreach ($keys as $key => $value) {
     if($_REQUEST[$keys[$key]]=="Obrisi" || $_REQUEST[$keys[$key]]=="Izmjeni" || $_REQUEST[$keys[$key]]=="Sacuvaj"){
+
         $koji_red=intval(explode("_",$keys[$key])[1]);
         if($_REQUEST[$keys[$key]]=="Obrisi"){
             $red = 0;
@@ -74,6 +102,28 @@ foreach ($keys as $key => $value) {
 
         }
         else if($_REQUEST[$keys[$key]]=="Sacuvaj"){
+            if(strlen($_REQUEST['Ime']) < 3) {
+                $errorTest = "Ime mora imati barem 3 slova." . "<br>";
+            }
+            else if(strlen($_REQUEST['Prezime']) < 3) {
+                $errorTest .= "Prezime mora imati barem 3 slova." . "<br>";
+            }
+            else if(!preg_match('/^[0-9]{3}-[0-9]{3}-[0-9]{3,4}$/', strval($_REQUEST['Telefon']))) {
+                $errorTest .= "Broj telefona mora imati oblik 000-000-000(0)" . "<br>";
+            }
+            else if(!preg_match('/^[A-Za-z0-9, ]{3,20}$/', strval($_REQUEST['Lokacija']))) {
+                $errorTest .= "Lokacija mora imati barem 5 slova." . "<br>";
+            }
+            else if(!preg_match('/^[A-Za-z0-9_]{1,20}$/', strval($_REQUEST['userName']))) {
+                $errorTest .= "Username mora imati barem 3 slova bez specijalnih karaktera." . "<br>";
+            }
+            else if(!preg_match('/^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i', strval($_REQUEST['eMail']))) {
+                $errorTest .= "Neispravan mail" . "<br>";
+            }
+            else if(!preg_match('/^[A-Za-z0-9!@#$%^&*()_]{6,20}$/', strval($_REQUEST['password']))) {
+                $errorTest .= "Neispravan password" . "<br>";
+            }
+            else{
             $red = 0;
 
             $xml=simplexml_load_file("korisnici.xml") or $postoji=false;
@@ -94,6 +144,7 @@ foreach ($keys as $key => $value) {
             $xml->asXML("korisnici.xml");
 
             header('Location: admin_korisnici.php');
+            }
         }
         else{
             $red_izmjena=$koji_red;
@@ -217,6 +268,9 @@ foreach ($keys as $key => $value) {
                     }
                     ?>
                 </table>
+            <p><?php
+                echo $errorTest;
+                ?></p>
             </form>
             </p>
         </hgroup>
