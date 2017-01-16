@@ -48,8 +48,7 @@ if(isset($_REQUEST['Komentar']) && !empty($_REQUEST['Komentar']) && isset($_REQU
               $statement = $connection->prepare("INSERT INTO comments (id, comment, user) VALUES (NULL, :comment, :user)");
 
               $comment = $dodaj[0]; 
-             # $user = $dodaj[1];
-              $user = '3';
+              $user = $dodaj[1];
 
               $statement->bindParam(':comment', $comment);
               $statement->bindParam(':user', $user);
