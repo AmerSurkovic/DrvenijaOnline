@@ -9,7 +9,7 @@ $dbname = "drvenija";
 
 # Fetch all IDs
 try {
-	$conn = new PDO("mysql:host=$servername;dbname=$dbname", $dbusername, $dbpassword);
+	$conn = new PDO('mysql:host=' . getenv('MYSQL_SERVICE_HOST') . ';port=3306;dbname=drvenija', 'admin', 'admin');
 	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	$stmt = $conn->prepare("SELECT id FROM users");
 	$stmt->execute();
@@ -39,7 +39,7 @@ foreach ($xml as $user) {
 	              $dbpassword = "admin";
 	              $dbname = "drvenija";
 
-	              $connection = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8", $dbusername, $dbpassword);
+	              $connection = new PDO('mysql:host=' . getenv('MYSQL_SERVICE_HOST') . ';port=3306;dbname=drvenija', 'admin', 'admin');
 	              // set the PDO error mode to exception
 	              $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 

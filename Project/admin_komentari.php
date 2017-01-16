@@ -40,7 +40,7 @@ if(isset($_REQUEST['Komentar']) && !empty($_REQUEST['Komentar']) && isset($_REQU
               $dbname = "drvenija";
 
 
-              $connection = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8", $dbusername, $dbpassword);
+              $connection = new PDO('mysql:host=' . getenv('MYSQL_SERVICE_HOST') . ';port=3306;dbname=drvenija', 'admin', 'admin');
               // set the PDO error mode to exception
               $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -83,7 +83,7 @@ foreach ($keys as $key => $value) {
             $dbname = "drvenija";
 
             try {
-                    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $dbusername, $dbpassword);
+                    $conn = new PDO('mysql:host=' . getenv('MYSQL_SERVICE_HOST') . ';port=3306;dbname=drvenija', 'admin', 'admin');
                     // set the PDO error mode to exception
                     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -113,7 +113,7 @@ foreach ($keys as $key => $value) {
                     $dbpassword = "admin";
                     $dbname = "drvenija";
 
-                  $connection = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8", $dbusername, $dbpassword);
+                  $connection = new PDO('mysql:host=' . getenv('MYSQL_SERVICE_HOST') . ';port=3306;dbname=drvenija', 'admin', 'admin');
                   // set the PDO error mode to exception
                   $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -210,12 +210,12 @@ foreach ($keys as $key => $value) {
 
                         try {
                             /*title=:title, school=:school, subject=:subject, year_published=:year_published, state=:state, price=:price, exchange_option=:exchange_option*/
-                            $conn = new PDO("mysql:host=$servername;dbname=$dbname", $dbusername, $dbpassword);
+                            $conn = new PDO('mysql:host=' . getenv('MYSQL_SERVICE_HOST') . ';port=3306;dbname=drvenija', 'admin', 'admin');
                             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                             $stmt = $conn->prepare("SELECT id, comment, user FROM comments");
                             $stmt->execute();
 
-                            $conn2 = new PDO("mysql:host=$servername;dbname=$dbname", $dbusername, $dbpassword);
+                            $conn2 = new PDO('mysql:host=' . getenv('MYSQL_SERVICE_HOST') . ';port=3306;dbname=drvenija', 'admin', 'admin');
                             $conn2->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                             $stmt2 = $conn->prepare("SELECT * FROM users");
                             $stmt2->execute();

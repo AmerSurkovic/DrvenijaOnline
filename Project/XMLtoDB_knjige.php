@@ -11,7 +11,7 @@ $dbname = "drvenija";
 try {
 	/*title=:title, school=:school, subject=:subject, year_published=:year_published, state=:state, price=:price, exchange_option=:exchange_option*/
 	# , title, school, subject, year_published, state, price, exchange_option
-	$conn = new PDO("mysql:host=$servername;dbname=$dbname", $dbusername, $dbpassword);
+	$conn = new PDO('mysql:host=' . getenv('MYSQL_SERVICE_HOST') . ';port=3306;dbname=drvenija', 'admin', 'admin');
 	$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	$stmt = $conn->prepare("SELECT id FROM books");
 	$stmt->execute();
@@ -41,7 +41,7 @@ foreach ($xml as $book) {
 	              $dbpassword = "admin";
 	              $dbname = "drvenija";
 
-	              $connection = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8", $dbusername, $dbpassword);
+	              $connection = new PDO('mysql:host=' . getenv('MYSQL_SERVICE_HOST') . ';port=3306;dbname=drvenija', 'admin', 'admin');
 	              // set the PDO error mode to exception
 	              $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
