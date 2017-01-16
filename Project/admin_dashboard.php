@@ -28,6 +28,7 @@ if($_SESSION['username'] != 'admin'){
         <li><a class="brick dashboard" href="admin_dashboard.php"><span class='icon ion-home'></span>Dashboard</a></li>
         <li><a class="brick pages" href="admin_korisnici.php"><span class='icon ion-document'></span>Registrovani korisnici</a></li>
         <li><a class="brick navigation" href="admin_udzbenici.php"><span class='icon ion-android-share-alt'></span>Udžbenici u prodaji</a></li>
+        <li><a class="brick navigation" href="admin_komentari.php"><span class='icon ion-android-share-alt'></span>Komentari korisnika</a></li>
         <li><a class="brick settings" href="admin_izvjestaji.php"><span class='icon ion-gear-a'></span>Izvještaji</a></li>
         <li><a class="brick users" href="logout.php"><span class='icon ion-person'></span>👤 Odjavi se</a></li>
     </ul>
@@ -43,6 +44,7 @@ if($_SESSION['username'] != 'admin'){
         <div class="brick title">
             <h2>Dobro došli</h2>
             <a href="mainPage.php" target="_blank">Pregled "Drvenija.ba"</a>
+            <br>
         </div>
 
         <div class="brick close">

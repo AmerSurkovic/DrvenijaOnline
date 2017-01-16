@@ -28,6 +28,7 @@ if($_SESSION['username'] != 'admin'){
         <li><a class="brick dashboard" href="admin_dashboard.php"><span class='icon ion-home'></span>Dashboard</a></li>
         <li><a class="brick pages" href="admin_korisnici.php"><span class='icon ion-document'></span>Registrovani korisnici</a></li>
         <li><a class="brick navigation" href="admin_udzbenici.php"><span class='icon ion-android-share-alt'></span>Udžbenici u prodaji</a></li>
+        <li><a class="brick navigation" href="admin_komentari.php"><span class='icon ion-android-share-alt'></span>Komentari korisnika</a></li>
         <li><a class="brick settings" href="admin_izvjestaji.php"><span class='icon ion-gear-a'></span>Izvještaji</a></li>
         <li><a class="brick users" href="logout.php"><span class='icon ion-person'></span>👤 Odjavi se</a></li>
     </ul>
@@ -77,6 +78,15 @@ if($_SESSION['username'] != 'admin'){
             <br>
             <form action="creatingPDF_udzbenici.php" method="get">
                 Pregled/download PDF svih aktivnih artikala <input class='dugme' type='submit' name='Opcija' value='Otvori'>
+            </form>
+            <br>
+            <h2>XML-DB kontrole</h2>
+            <form action="XMLtoDB_knjige.php" method="get">
+                Knjige[XML] Update u bazu podataka <input class='dugme' type='submit' name='Opcija' value='Update'>
+            </form>
+            <br>
+            <form action="XMLtoDB_korisnici.php" method="get">
+                Korisnici[XML] Update u bazu podataka <input class='dugme' type='submit' name='Opcija' value='Update'>
             </form>
             <br>
         </hgroup>

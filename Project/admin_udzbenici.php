@@ -49,11 +49,11 @@ if(isset($_REQUEST['Naziv']) && !empty($_REQUEST['Naziv']) && isset($_REQUEST['S
         else if(strval($_REQUEST['GodinaIzdavanja']) < 1900 || strval($_REQUEST['GodinaIzdavanja']) > 2017) {
             $errorTest .= "Godina izdavanja ne moze biti ispod 1990 ili iznad 2017." . "<br>";
         }
-        else if(!preg_match('/^[0-9 ]$/', strval($_REQUEST['Cijena']))) {
-            $errorTest .= "Cijena mora biti broj." . "<br>";
-        }
+        #else if(!preg_match('/^[0-9 ]$/', strval($_REQUEST['Cijena']))) {
+        #    $errorTest .= "Cijena mora biti broj." . "<br>";
+        #}
         else{
-            header("Refresh:0");
+            /*header("Refresh:0");
             $xml=simplexml_load_file("knjige.xml") or $postoji=false;
 
             if($postoji==false){
@@ -72,7 +72,58 @@ if(isset($_REQUEST['Naziv']) && !empty($_REQUEST['Naziv']) && isset($_REQUEST['S
             $person->addChild('MogucnostRazmjene', $_REQUEST['MogucnostRazmjene']);
             $xml->asXML("knjige.xml");
 
-            header('Location: admin_udzbenici.php');
+            header('Location: admin_udzbenici.php');*/
+            header("Refresh:0");
+            $dodaj= array();
+            $dodaj[0]=$_REQUEST['Naziv'];
+            $dodaj[1]=$_REQUEST['Skola'];
+            $dodaj[2]=$_REQUEST['Predmet'];
+            $dodaj[3]=$_REQUEST['GodinaIzdavanja'];
+            $dodaj[4]=$_REQUEST['Stanje'];
+            $dodaj[5]=$_REQUEST['Cijena'];
+            $dodaj[6]=$_REQUEST['MogucnostRazmjene'];
+            
+            try{
+              $servername = "localhost";
+              $dbusername = "admin";
+              $dbpassword = "admin";
+              $dbname = "drvenija";
+
+
+              $connection = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8", $dbusername, $dbpassword);
+              // set the PDO error mode to exception
+              $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+              // prepare sql and bind parameters
+              $statement = $connection->prepare("INSERT INTO books (id, title, school, subject, year_published, state, price, exchange_option, user) VALUES (NULL, :title, :school, :subject, :year_published, :state, :price, :exchange_option, :user)");
+
+              $title = $dodaj[0]; 
+              $school = $dodaj[1];
+              $subject = $dodaj[2];
+              $year_published = $dodaj[3];
+              $state = $dodaj[4];
+              $price = $dodaj[5];
+              $exchange_option = $dodaj[6];
+              $user = '3';
+
+              $statement->bindParam(':title', $title);
+              $statement->bindParam(':school', $school);
+              $statement->bindParam(':subject', $subject);
+              $statement->bindParam(':year_published', $year_published);
+              $statement->bindParam(':state', $state);
+              $statement->bindParam(':price', $price);
+              $statement->bindParam(':exchange_option', $exchange_option);
+              $statement->bindParam(':user', $user);
+
+              $statement->execute();
+
+              header('Location: admin_udzbenici.php');
+            }
+            catch(PDOException $e){
+              echo "Error: " . $e->getMessage();
+            }
+
+            $connection=null;
         }
     }
 }
@@ -80,16 +131,37 @@ if(isset($_REQUEST['Naziv']) && !empty($_REQUEST['Naziv']) && isset($_REQUEST['S
 $keys=array_keys($_GET);
 foreach ($keys as $key => $value) {
     if($_REQUEST[$keys[$key]]=="Obrisi" || $_REQUEST[$keys[$key]]=="Izmjeni" || $_REQUEST[$keys[$key]]=="Sacuvaj"){
+
         $koji_red=intval(explode("_",$keys[$key])[1]);
+        $koji_id=intval(explode("_",$keys[$key])[2]);
+
         if($_REQUEST[$keys[$key]]=="Obrisi"){
             $red = 0;
 
-            $xml=simplexml_load_file("knjige.xml");
+            $servername = "localhost";
+            $dbusername = "admin";
+            $dbpassword = "admin";
+            $dbname = "drvenija";
 
-            unset($xml->knjiga[$koji_red-1]);
+            try {
+                    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $dbusername, $dbpassword);
+                    // set the PDO error mode to exception
+                    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            $xml->asXML("knjige.xml");
+                    $bookID = $koji_id;
 
+                    $sql = "DELETE FROM books WHERE id=$bookID";
+
+                    // use exec() because no results are returned
+                    $conn->exec($sql);
+                    echo "Record deleted successfully";
+                }
+            catch(PDOException $e)
+                {
+                    echo $sql . "<br>" . $e->getMessage();
+                }
+
+            $conn = null;
             header('Location: admin_udzbenici.php');
 
         }
@@ -106,12 +178,11 @@ foreach ($keys as $key => $value) {
             else if(strval($_REQUEST['GodinaIzdavanja']) < 1900 || strval($_REQUEST['GodinaIzdavanja']) > 2017) {
                 $errorTest .= "Godina izdavanja ne moze biti ispod 1990 ili iznad 2017." . "<br>";
             }
-            else if(!preg_match('/^[0-9 ]$/', strval($_REQUEST['Cijena']))) {
-                $errorTest .= "Cijena mora biti broj." . "<br>";
-            }
+       #     else if(!preg_match('/^[0-9 ]$/', strval($_REQUEST['Cijena']))) {
+       #         $errorTest .= "Cijena mora biti broj." . "<br>";
+       #     }
             else{
-                $red = 0;
-
+/*
                 $xml=simplexml_load_file("knjige.xml") or $postoji=false;
 
                 if($postoji==false){
@@ -130,6 +201,48 @@ foreach ($keys as $key => $value) {
                 $xml->asXML("knjige.xml");
 
                 header('Location: admin_udzbenici.php');
+*/
+                $red = 0;
+
+            try {
+                    $servername = "localhost";
+                    $dbusername = "admin";
+                    $dbpassword = "admin";
+                    $dbname = "drvenija";
+
+                  $connection = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8", $dbusername, $dbpassword);
+                  // set the PDO error mode to exception
+                  $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                  $statement = $connection->prepare("UPDATE books SET title=:title, school=:school, subject=:subject, year_published=:year_published, state=:state, price=:price, exchange_option=:exchange_option WHERE id=:id");
+
+                  $id = $koji_id;
+                  $title= $_REQUEST['Naziv'];
+                  $school = $_REQUEST['Skola'];
+                  $subject = $_REQUEST['Predmet'];
+                  $year_published = $_REQUEST['GodinaIzdavanja'];
+                  $state = $_REQUEST['Stanje'];
+                  $price = $_REQUEST['Cijena'];
+                  $exchange_option = $_REQUEST['MogucnostRazmjene'];
+
+                  $statement->bindParam(':id', $id);
+                  $statement->bindParam(':title', $title);
+                  $statement->bindParam(':school', $school);
+                  $statement->bindParam(':subject', $subject);
+                  $statement->bindParam(':year_published', $year_published);
+                  $statement->bindParam(':state', $state);
+                  $statement->bindParam(':price', $price);
+                  $statement->bindParam(':exchange_option', $exchange_option);
+
+                  $statement->execute();
+
+                  header('Location: admin_udzbenici.php');
+                }
+            catch(PDOException $e){
+              echo "Error: " . $e->getMessage();
+            }
+
+            $conn = null;
             }
         }
         else{
@@ -147,6 +260,7 @@ foreach ($keys as $key => $value) {
         <li><a class="brick dashboard" href="admin_dashboard.php"><span class='icon ion-home'></span>Dashboard</a></li>
         <li><a class="brick pages" href="admin_korisnici.php"><span class='icon ion-document'></span>Registrovani korisnici</a></li>
         <li><a class="brick navigation" href="admin_udzbenici.php"><span class='icon ion-android-share-alt'></span>Udžbenici u prodaji</a></li>
+        <li><a class="brick navigation" href="admin_komentari.php"><span class='icon ion-android-share-alt'></span>Komentari korisnika</a></li>
         <li><a class="brick settings" href="admin_izvjestaji.php"><span class='icon ion-gear-a'></span>Izvještaji</a></li>
         <li><a class="brick users" href="logout.php"><span class='icon ion-person'></span>👤 Odjavi se</a></li>
     </ul>
@@ -216,23 +330,43 @@ foreach ($keys as $key => $value) {
                     <?php
                     $broj = 0;
                     if (file_exists("knjige.xml")) {
-                        $xml = simplexml_load_file("knjige.xml") or die("Error: Cannot create object");
-                        foreach ($xml as $knjiga) {
-                            if ($broj != $red_izmjena && !empty($knjiga->naziv)) {
+                        
+                        $servername = "localhost";
+                        $dbusername = "admin";
+                        $dbpassword = "admin";
+                        $dbname = "drvenija";
+
+                        try {
+                            /*title=:title, school=:school, subject=:subject, year_published=:year_published, state=:state, price=:price, exchange_option=:exchange_option*/
+                            $conn = new PDO("mysql:host=$servername;dbname=$dbname", $dbusername, $dbpassword);
+                            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                            $stmt = $conn->prepare("SELECT id, title, school, subject, year_published, state, price, exchange_option FROM books");
+                            $stmt->execute();
+
+                            // set the resulting array to associative
+                            $result = $stmt->fetchAll();
+                        }
+                        catch(PDOException $e) {
+                            echo "Error: " . $e->getMessage();
+                        }
+                        $conn = null;
+
+                        foreach ($result as $knjiga) {
+                            if ($broj != $red_izmjena && !empty($knjiga['id'])) {
                                 echo "<tr>";
-                                echo "<td>" . $knjiga->naziv . "</td><td>" . $knjiga->skola . "</td><td>" . $knjiga->predmet . "</td><td>" . $knjiga->GodinaIzdavanja . "</td><td>" . $knjiga->stanje . "</td><td>" . $knjiga->cijena . "</td><td>" . $knjiga->MogucnostRazmjene . "</td><td><input class='dugme' type='submit' name='Opcija_" . $broj . "' value='Obrisi'></td><td><input class='dugme' type='submit' name='Opcija_" . $broj . "'value='Izmjeni'></td>";
+                                echo "<td>" . $knjiga['title'] . "</td><td>" . $knjiga['school'] . "</td><td>" . $knjiga['subject'] . "</td><td>" . $knjiga['year_published'] . "</td><td>" . $knjiga['state'] . "</td><td>" . $knjiga['price'] . "</td><td>" . $knjiga['exchange_option'] . "</td><td><input class='dugme' type='submit' name='Opcija_" . $broj . "_" . $knjiga['id'] . "' value='Obrisi'></td><td><input class='dugme' type='submit' name='Opcija_" . $broj .  "_" . $knjiga['id'] . "'value='Izmjeni'></td>";
                                 echo "</tr>";
-                            } else if (!empty($knjiga->naziv)) {
+                            } else if (!empty($knjiga['title'])) {
                                 echo "<tr>";
-                                echo "<td><input type='text' name='Naziv' value='" . $knjiga->naziv . "'></td>";
-                                echo  "<td><input type='text' name='Skola' value='" . $knjiga->skola . "'></td>";
-                                echo  "<td><input type='text' name='Predmet' value='" . $knjiga->predmet . "'></td>";
-                                echo "<td><input type='text' name='GodinaIzdavanja' value='" . $knjiga->GodinaIzdavanja . "'></td>";
-                                echo  "<td><input type='text' name='Stanje' value='" . $knjiga->stanje . "'></td>";
-                                echo  "<td><input type='text' name='Cijena' value='" . $knjiga->cijena . "'></td>";
-                                echo "<td><input type='text' name='MogucnostRazmjene' value='" . $knjiga->MogucnostRazmjene . "'></td>";
-                                echo  "<td><input class='dugme' type='submit' name='Opcija_" . $broj . "' value='Obrisi'>";
-                                echo   "<td><input class='dugme' type='submit' name='Opcija_" . $broj . "' value='Sacuvaj'>";
+                                echo "<td><input type='text' name='Naziv' value='" . $knjiga['title'] . "'></td>";
+                                echo  "<td><input type='text' name='Skola' value='" . $knjiga['school'] . "'></td>";
+                                echo  "<td><input type='text' name='Predmet' value='" . $knjiga['subject'] . "'></td>";
+                                echo "<td><input type='text' name='GodinaIzdavanja' value='" . $knjiga['year_published'] . "'></td>";
+                                echo  "<td><input type='text' name='Stanje' value='" . $knjiga['state'] . "'></td>";
+                                echo  "<td><input type='text' name='Cijena' value='" . $knjiga['price'] . "'></td>";
+                                echo "<td><input type='text' name='MogucnostRazmjene' value='" . $knjiga['exchange_option'] . "'></td>";
+                                echo  "<td><input class='dugme' type='submit' name='Opcija_" . $broj . "_" . $knjiga['id'] . "' value='Obrisi'>";
+                                echo   "<td><input class='dugme' type='submit' name='Opcija_" . $broj . "_" . $knjiga['id'] . "' value='Sacuvaj'>";
                                 echo "</tr>";
                             }
                             $broj++;

@@ -52,7 +52,7 @@ session_start();
         </div>
     </div>
     <div class="column two"><h2> <a id="prijavaLink" href="prijava.php">👤 <?php
-                if($_SESSION['username']!=''){
+                if(isset($_SESSION['username'])){
                     echo $_SESSION['username'];
                 }
                 else{

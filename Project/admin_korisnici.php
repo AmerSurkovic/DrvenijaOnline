@@ -61,25 +61,45 @@ if(isset($_REQUEST['Ime']) && !empty($_REQUEST['Ime']) && isset($_REQUEST['Prezi
             $dodaj[5]=$_REQUEST['eMail'];
             $dodaj[6]=$_REQUEST['password'];
 
-            $xml=simplexml_load_file("korisnici.xml") or $postoji=false;
+            try{
+              $servername = "localhost";
+              $dbusername = "admin";
+              $dbpassword = "admin";
+              $dbname = "drvenija";
 
-            if($postoji==false){
-                $xml = new SimpleXMLElement('<?xml version="1.0" encoding="utf-8"?><korisnici></korisnici>');
-                $xml->addAttribute('version', '1.0');
-                $xml->addChild('datetime', date('Y-m-d H:i:s'));
+
+              $connection = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8", $dbusername, $dbpassword);
+              // set the PDO error mode to exception
+              $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+              // prepare sql and bind parameters
+              $statement = $connection->prepare("INSERT INTO users (id, name, surname, phone_number, location, username, email, password) VALUES (NULL, :name, :surname, :phone_number, :location, :username, :email, :password)");
+
+              $name = $dodaj[0]; 
+              $surname = $dodaj[1];
+              $phone_number = $dodaj[2];
+              $location = $dodaj[3];
+              $username = $dodaj[4];
+              $email = $dodaj[5];
+              $password = $dodaj[6];
+
+              $statement->bindParam(':name', $name);
+              $statement->bindParam(':surname', $surname);
+              $statement->bindParam(':phone_number', $phone_number);
+              $statement->bindParam(':location', $location);
+              $statement->bindParam(':username', $username);
+              $statement->bindParam(':email', $email);
+              $statement->bindParam(':password', $password);
+
+              $statement->execute();
+
+              header('Location: admin_korisnici.php');
+            }
+            catch(PDOException $e){
+              echo "Error: " . $e->getMessage();
             }
 
-            $person = $xml->addChild('korisnik');
-            $person->addChild('Ime', $dodaj[0]);
-            $person->addChild('Prezime', $dodaj[1]);
-            $person->addChild('Telefon', $dodaj[2]);
-            $person->addChild('Lokacija', $dodaj[3]);
-            $person->addChild('userName', $dodaj[4]);
-            $person->addChild('eMail', $dodaj[5]);
-            $person->addChild('password', $dodaj[6]);
-            $xml->asXML("korisnici.xml");
-
-            header('Location: admin_korisnici.php');
+            $connection=null;
         }
     }
 }
@@ -89,15 +109,34 @@ foreach ($keys as $key => $value) {
     if($_REQUEST[$keys[$key]]=="Obrisi" || $_REQUEST[$keys[$key]]=="Izmjeni" || $_REQUEST[$keys[$key]]=="Sacuvaj"){
 
         $koji_red=intval(explode("_",$keys[$key])[1]);
+        $koji_id=intval(explode("_",$keys[$key])[2]);
         if($_REQUEST[$keys[$key]]=="Obrisi"){
             $red = 0;
 
-            $xml=simplexml_load_file("korisnici.xml");
+            $servername = "localhost";
+            $dbusername = "admin";
+            $dbpassword = "admin";
+            $dbname = "drvenija";
 
-            unset($xml->korisnik[$koji_red-1]);
+            try {
+                    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $dbusername, $dbpassword);
+                    // set the PDO error mode to exception
+                    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-            $xml->asXML("korisnici.xml");
+                    $userID = $koji_id;
 
+                    $sql = "DELETE FROM users WHERE id=$userID";
+
+                    // use exec() because no results are returned
+                    $conn->exec($sql);
+                    echo "Record deleted successfully";
+                }
+            catch(PDOException $e)
+                {
+                    echo $sql . "<br>" . $e->getMessage();
+                }
+
+            $conn = null;
             header('Location: admin_korisnici.php');
 
         }
@@ -126,24 +165,46 @@ foreach ($keys as $key => $value) {
             else{
             $red = 0;
 
-            $xml=simplexml_load_file("korisnici.xml") or $postoji=false;
+            try {
+                    $servername = "localhost";
+                    $dbusername = "admin";
+                    $dbpassword = "admin";
+                    $dbname = "drvenija";
 
-            if($postoji==false){
-                $xml = new SimpleXMLElement('<?xml version="1.0" encoding="utf-8"?><korisnici></korisnici>');
-                $xml->addAttribute('version', '1.0');
-                $xml->addChild('datetime', date('Y-m-d H:i:s'));
+                  $connection = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8", $dbusername, $dbpassword);
+                  // set the PDO error mode to exception
+                  $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+                  // prepare sql and bind parameters
+                  $statement = $connection->prepare("UPDATE users SET name=:name, surname=:surname, phone_number=:phone_number, location=:location, username=:username, email=:email, password=:password WHERE id=:id");
+
+                  $id = $koji_id;
+                  $name= $_REQUEST['Ime'];
+                  $surname = $_REQUEST['Prezime'];
+                  $phone_number = $_REQUEST['Telefon'];
+                  $location = $_REQUEST['Lokacija'];
+                  $username = $_REQUEST['userName'];
+                  $email = $_REQUEST['eMail'];
+                  $password = $_REQUEST['password'];
+
+                  $statement->bindParam(':id', $id);
+                  $statement->bindParam(':name', $name);
+                  $statement->bindParam(':surname', $surname);
+                  $statement->bindParam(':phone_number', $phone_number);
+                  $statement->bindParam(':location', $location);
+                  $statement->bindParam(':username', $username);
+                  $statement->bindParam(':email', $email);
+                  $statement->bindParam(':password', $password);
+
+                  $statement->execute();
+
+                  header('Location: admin_korisnici.php');
+                }
+            catch(PDOException $e){
+              echo "Error: " . $e->getMessage();
             }
 
-            $xml->korisnik[$koji_red-1]->Ime = $_REQUEST['Ime'];
-            $xml->korisnik[$koji_red-1]->Prezime = $_REQUEST['Prezime'];
-            $xml->korisnik[$koji_red-1]->Telefon = $_REQUEST['Telefon'];
-            $xml->korisnik[$koji_red-1]->Lokacija = $_REQUEST['Lokacija'];
-            $xml->korisnik[$koji_red-1]->userName = $_REQUEST['userName'];
-            $xml->korisnik[$koji_red-1]->eMail = $_REQUEST['eMail'];
-            $xml->korisnik[$koji_red-1]->password = $_REQUEST['password'];
-            $xml->asXML("korisnici.xml");
-
-            header('Location: admin_korisnici.php');
+            $conn = null;
             }
         }
         else{
@@ -161,6 +222,7 @@ foreach ($keys as $key => $value) {
         <li><a class="brick dashboard" href="admin_dashboard.php"><span class='icon ion-home'></span>Dashboard</a></li>
         <li><a class="brick pages" href="admin_korisnici.php"><span class='icon ion-document'></span>Registrovani korisnici</a></li>
         <li><a class="brick navigation" href="admin_udzbenici.php"><span class='icon ion-android-share-alt'></span>Udžbenici u prodaji</a></li>
+        <li><a class="brick navigation" href="admin_komentari.php"><span class='icon ion-android-share-alt'></span>Komentari korisnika</a></li>
         <li><a class="brick settings" href="admin_izvjestaji.php"><span class='icon ion-gear-a'></span>Izvještaji</a></li>
         <li><a class="brick users" href="logout.php"><span class='icon ion-person'></span>👤 Odjavi se</a></li>
     </ul>
@@ -230,23 +292,44 @@ foreach ($keys as $key => $value) {
                     <?php
                     $broj = 0;
                     if (file_exists("korisnici.xml")) {
-                        $xml = simplexml_load_file("korisnici.xml") or die("Error: Cannot create object");
-                        foreach ($xml as $korisnik) {
-                            if ($broj != $red_izmjena && !empty($korisnik->Ime)) {
+                        # This is where I make changes
+                        # $xml = simplexml_load_file("korisnici.xml") or die("Error: Cannot create object");
+                        $servername = "localhost";
+                        $dbusername = "admin";
+                        $dbpassword = "admin";
+                        $dbname = "drvenija";
+
+                        try {
+                            $conn = new PDO("mysql:host=$servername;dbname=$dbname", $dbusername, $dbpassword);
+                            $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                            $stmt = $conn->prepare("SELECT id, name, surname, phone_number, location, username, email, password FROM users");
+                            $stmt->execute();
+
+                            // set the resulting array to associative
+                            $result = $stmt->fetchAll();
+                        }
+                        catch(PDOException $e) {
+                            echo "Error: " . $e->getMessage();
+                        }
+                        $conn = null;
+
+                        # End of changes
+                        foreach ($result as $korisnik) {
+                            if ($broj != $red_izmjena && !empty($korisnik['name'])) {
                                 echo "<tr>";
-                                echo "<td>" . $korisnik->Ime . "</td><td>" . $korisnik->Prezime . "</td><td>" . $korisnik->Telefon . "</td><td>" . $korisnik->Lokacija . "</td><td>" . $korisnik->userName . "</td><td>" . $korisnik->eMail . "</td><td>" . $korisnik->password . "</td><td><input class='dugme' type='submit' name='Opcija_" . $broj . "' value='Obrisi'></td><td><input class='dugme' type='submit' name='Opcija_" . $broj . "'value='Izmjeni'></td>";
+                                echo "<td>" . $korisnik['name'] . "</td><td>" . $korisnik['surname'] . "</td><td>" . $korisnik['phone_number'] . "</td><td>" . $korisnik['location'] . "</td><td>" . $korisnik['username'] . "</td><td>" . $korisnik['email'] . "</td><td>" . $korisnik['password'] . "</td><td><input class='dugme' type='submit' name='Opcija_" . $broj . "_" . $korisnik['id'] ."' value='Obrisi'></td><td><input class='dugme' type='submit' name='Opcija_" . $broj . "_" . $korisnik['id'] ."'value='Izmjeni'></td>";
                                 echo "</tr>";
-                            } else if(!empty($korisnik->Ime)) {
+                            } else if(!empty($korisnik['name'])) {
                                 echo "<tr>";
-                                echo "<td><input type='text' name='Ime' value='" . $korisnik->Ime . "'></td>";
-                                echo  "<td><input type='text' name='Prezime' value='" . $korisnik->Prezime . "'></td>";
-                                echo  "<td><input type='text' name='Telefon' value='" . $korisnik->Telefon . "'></td>";
-                                echo "<td><input type='text' name='Lokacija' value='" . $korisnik->Lokacija . "'></td>";
-                                echo  "<td><input type='text' name='userName' value='" . $korisnik->userName . "'></td>";
-                                echo  "<td><input type='text' name='eMail' value='" . $korisnik->eMail . "'></td>";
-                                echo "<td><input type='text' name='password' value='" . $korisnik->password . "'></td>";
-                                echo  "<td><input class='dugme' type='submit' name='Opcija_" . $broj . "' value='Obrisi'>";
-                                echo   "<td><input class='dugme' type='submit' name='Opcija_" . $broj . "' value='Sacuvaj'>";
+                                echo "<td><input type='text' name='Ime' value='" . $korisnik['name'] . "'></td>";
+                                echo  "<td><input type='text' name='Prezime' value='" . $korisnik['surname'] . "'></td>";
+                                echo  "<td><input type='text' name='Telefon' value='" . $korisnik['phone_number'] . "'></td>";
+                                echo "<td><input type='text' name='Lokacija' value='" . $korisnik['location'] . "'></td>";
+                                echo  "<td><input type='text' name='userName' value='" . $korisnik['username'] . "'></td>";
+                                echo  "<td><input type='text' name='eMail' value='" . $korisnik['email'] . "'></td>";
+                                echo "<td><input type='text' name='password' value='" . $korisnik['password'] . "'></td>";
+                                echo  "<td><input class='dugme' type='submit' name='Opcija_" . $broj . "_" . $korisnik['id'] ."' value='Obrisi'>";
+                                echo   "<td><input class='dugme' type='submit' name='Opcija_" . $broj . "_" . $korisnik['id'] ."' value='Sacuvaj'>";
                                 echo "</tr>";
                             }
                             $broj++;
@@ -275,37 +358,6 @@ foreach ($keys as $key => $value) {
             </p>
         </hgroup>
     </div>
-<!--
-    <div class="brick closed">
-        <hgroup>
-            <h2>Test</h2>
-            <a href="#" class="icon ion-close js-close close"></a>
-            <form>
-                <textarea></textarea>
-            </form>
-        </hgroup>
-    </div>
-
-    <div class="brick closed">
-        <hgroup>
-            <h2>Test</h2>
-            <a href="#" class="icon ion-close js-close close"></a>
-            <form>
-                <textarea></textarea>
-            </form>
-        </hgroup>
-    </div>
-
-    <div class="brick closed">
-        <hgroup>
-            <h2>Test</h2>
-            <a href="#" class="icon ion-close js-close close"></a>
-            <form>
-                <textarea></textarea>
-            </form>
-        </hgroup>
-    </div>
--->
 
 </div>
 
