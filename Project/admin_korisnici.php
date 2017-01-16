@@ -68,7 +68,7 @@ if(isset($_REQUEST['Ime']) && !empty($_REQUEST['Ime']) && isset($_REQUEST['Prezi
               $dbname = "drvenija";
 
 
-              $connection = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8", $dbusername, $dbpassword);
+              $connection = new PDO('mysql:host=' . getenv('MYSQL_SERVICE_HOST') . ';port=3306;dbname=drvenija', 'admin', 'admin');
               // set the PDO error mode to exception
               $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -119,7 +119,7 @@ foreach ($keys as $key => $value) {
             $dbname = "drvenija";
 
             try {
-                    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $dbusername, $dbpassword);
+                    $conn = new PDO('mysql:host=' . getenv('MYSQL_SERVICE_HOST') . ';port=3306;dbname=drvenija', 'admin', 'admin');
                     // set the PDO error mode to exception
                     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -171,7 +171,7 @@ foreach ($keys as $key => $value) {
                     $dbpassword = "admin";
                     $dbname = "drvenija";
 
-                  $connection = new PDO("mysql:host=$servername;dbname=$dbname;charset=utf8", $dbusername, $dbpassword);
+                  $connection = new PDO('mysql:host=' . getenv('MYSQL_SERVICE_HOST') . ';port=3306;dbname=drvenija', 'admin', 'admin');
                   // set the PDO error mode to exception
                   $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
@@ -300,7 +300,7 @@ foreach ($keys as $key => $value) {
                         $dbname = "drvenija";
 
                         try {
-                            $conn = new PDO("mysql:host=$servername;dbname=$dbname", $dbusername, $dbpassword);
+                            $conn = new PDO('mysql:host=' . getenv('MYSQL_SERVICE_HOST') . ';port=3306;dbname=drvenija', 'admin', 'admin');
                             $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                             $stmt = $conn->prepare("SELECT id, name, surname, phone_number, location, username, email, password FROM users");
                             $stmt->execute();
