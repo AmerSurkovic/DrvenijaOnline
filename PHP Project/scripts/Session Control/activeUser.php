@@ -20,10 +20,11 @@ function setActiveUser(){
 
     if(isset($_SESSION['username'])){
         if($bool == true){
-            echo '<a id="prijavaLink" href="userAccount.php">' . $_SESSION['username'];
+            echo '<a id="prijavaLink" href="pages/User dashboard/landingPage.php">' . $_SESSION['username'];
         }
         else{
-            echo '<a id="prijavaLink" href="pages/userAccount.php">' . $_SESSION['username'];
+            #echo '<a id="prijavaLink" href="pages/userAccount.php">' . $_SESSION['username'];
+            echo '<a id="prijavaLink" href="pages/User dashboard/landingPage.php">' . $_SESSION['username'];
         }
     }
     else{

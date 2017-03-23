@@ -15,7 +15,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"/>
     <title>Prijava ba</title>
 
     <link rel="stylesheet" href="../lib/css/dropdown.css">

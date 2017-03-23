@@ -2,6 +2,9 @@
 
 session_start();
 
+$_POST = array(); //workaround for broken PHPstorm
+parse_str(file_get_contents('php://input'), $_POST);
+
 require($_SERVER['DOCUMENT_ROOT'] . '/PHP Project/database/configuration/DATABASE_CONNECTION.php');
 
 $postoji=true;
@@ -23,6 +26,10 @@ $errorTest = '';
     <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 
     <script type="text/javascript" src="../../../lib/js/adminDashboard.js"></script>
+
+    <!-- TESTNO
+    <script type="text/javascript" src="../../../sendSessionID.js"></script>
+-->
 </HEADER>
 
 <BODY>
@@ -226,7 +233,7 @@ foreach ($keys as $key => $value) {
 
         <div class="brick title">
             <h2>Trenutno ste na pregledu svih korisnika registrovanih na stranici.</h2>
-            <a href="../../index.php" target="_blank">Pregled "Drvenija.ba"</a>
+            <a href="../../../index.php" target="_blank">Pregled "Drvenija.ba"</a>
         </div>
 
         <div class="brick close">

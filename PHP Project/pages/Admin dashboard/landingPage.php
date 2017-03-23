@@ -1,22 +1,24 @@
 <?php
 session_start();
 
-if($_SESSION['username'] != 'admin'){
-    header('Location: prijava.php');
-}
+#if($_SESSION['username'] != 'admin'){
+#    header('Location: prijava.php');
+#}
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
-<HEADER>
+<head>
+    <meta charset="UTF-8"/>
+
     <link rel="stylesheet" href="../../lib/css/adminDashboard.css">
 
     <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 
     <script type="text/javascript" src="../../lib/js/adminDashboard.js"></script>
-</HEADER>
+</head>
 
 <BODY>
 

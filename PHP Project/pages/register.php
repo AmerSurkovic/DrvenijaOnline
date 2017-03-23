@@ -2,6 +2,8 @@
     $_POST = array(); //workaround for broken PHPstorm
     parse_str(file_get_contents('php://input'), $_POST);
 
+    require($_SERVER['DOCUMENT_ROOT'] . '/PHP Project/database/configuration/DATABASE_CONNECTION.php');
+
     ob_start();
     session_start();
 
@@ -24,7 +26,7 @@
 
     <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 
-    <script src="../lib/js/register.js"></script>
+  <!-- <script src="../lib/js/register.js"></script> -->
     <script src="../lib/js/dropdown.js"></script>
 </head>
 
@@ -42,7 +44,40 @@ if(isset($_REQUEST['ime']) && !empty($_REQUEST['ime']) && isset($_REQUEST['prezi
         $dodaj[5]=$_REQUEST['eMail'];
         $dodaj[6]=$_REQUEST['password'];
 
-        $xml=simplexml_load_file("users.xml") or $postoji=false;
+        try{
+            $connection = DATABASE_CONNECTION::create_PDO();
+            $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+            // prepare sql and bind parameters
+            $statement = $connection->prepare("INSERT INTO users (id, name, surname, phone_number, location, username, email, password) VALUES (NULL, :name, :surname, :phone_number, :location, :username, :email, :password)");
+
+            $name = $dodaj[0];
+            $surname = $dodaj[1];
+            $phone_number = $dodaj[2];
+            $location = $dodaj[3];
+            $username = $dodaj[4];
+            $email = $dodaj[5];
+            $password = $dodaj[6];
+
+            $statement->bindParam(':name', $name);
+            $statement->bindParam(':surname', $surname);
+            $statement->bindParam(':phone_number', $phone_number);
+            $statement->bindParam(':location', $location);
+            $statement->bindParam(':username', $username);
+            $statement->bindParam(':email', $email);
+            $statement->bindParam(':password', $password);
+
+            $statement->execute();
+
+            header('Location: ../index.php');
+        }
+        catch(PDOException $e){
+            echo "Error: " . $e->getMessage();
+        }
+
+        $connection=null;
+
+        /*$xml=simplexml_load_file("users.xml") or $postoji=false;
 
         if($postoji==false){
             $xml = new SimpleXMLElement('<?xml version="1.0" encoding="utf-8"?><korisnici></korisnici>');
@@ -60,7 +95,8 @@ if(isset($_REQUEST['ime']) && !empty($_REQUEST['ime']) && isset($_REQUEST['prezi
         $person->addChild('password', $dodaj[6]);
         $xml->asXML("users.xml");
 
-        #header('Location: admin_korisnici.php');
+        #header('Location: admin_korisnici.php');*/
+
     }
 }
 
